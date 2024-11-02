@@ -150,12 +150,19 @@ img {
 
 #popUpKey {
   background: none;
-
-  width: 200px;
-  height: 180px;
+  width: 175px;
+  height: 150px;
   position: relative;
-  right: 40%;
-  bottom: 350px;
+  right: 22%;
+  bottom: 200px;
+}
+
+#magnifyingGlass {
+  position: relative;
+  width:150px;
+  height: 150px;
+  bottom: 450px;
+  left: 320px;
 }
 
 
