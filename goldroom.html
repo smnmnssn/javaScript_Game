@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Room</title>
+
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="game.js"></script>
+
+</head>
+<body>
+  <div>
+    <img id="closed_chest_img" src="assets\Interior\chestkey.png" usemap="#goldroom_map">
+    
+    <map name="goldroom_map">
+      <area shape="rect" coords="140,500,213,546" alt="Key behind pillar" id="chest_key" onclick="collectKey()">
+      <area shape="rect" coords="561,586,323,395" alt="Closed chest" onclick="openChest()">
+    </map>
+
+  
+
+    
+
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedroom</title>
+
+  <style type="text/css">
+    @font-face {
+      font-family: "myFont";
+      src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf) format("truetype");
+    }
+  </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="game.js"></script>
+  
+</head>
+<body>
+  <div>
+      <img id="scene_img" src="assets\Interior\Sovrum\bedroom_key3.png" usemap="#bedroom_map">
+      
+      <map name="bedroom_map">
+        <area shape="rect" coords="523,635,564,670" alt="Key under bed" id="bed_key" onclick="collectKey()">
+        <area shape="rect" coords="567,544,324,180" alt="Big wooden door" onclick="secondScene()">
+      </map>
+    <img id="popUpKey" src="assets\Interior\Foremal\popUpKey.png" alt="Nyckel">
+
+  </div>
+
+  
+  <div id="dialogBox1" style="background-image: url(assets/Knappar/pokemonDialogBox.png)" ;>
+    <p id="dialogText"></p>
+  </div>
+
+  <div id="keyPopUp">
+    <img id="popUpKey src="assets\Interior\Foremal\popUpKey.png" alt="Nyckel">
+  </div>
+
+
+
+
+   
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main door</title>
+
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="game.js"></script>
+
+
+</head>
+<body>
+  <img id="scene_img" src="assets\Interior\maindoorkey.png" usemap="#bedroom_map">
+
+  <map name="bedroom_map">
+    <area shape="rect" coords="218,457,154,369" alt="Key on wall" id="main_key" onclick="collectKey()">
+    <area shape="rect" coords="291,210,528,590" alt="Big wooden door" onclick="finalDoor()">
+  </map>
+
+</body>
+</html>

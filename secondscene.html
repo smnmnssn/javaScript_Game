@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallway</title>
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="game.js"></script>
+</head>
+<body>
+
+  <div>
+    <img id="scene_img" src="assets\Interior\4232.jpg" usemap="#hallway_map">
+        
+        <map name="hallway_map">
+          <area shape="rect" coords="166,100,281,553" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
+          <area shape="rect" coords="439,140,613,420" alt="Go down hallway" id="hallway" onclick="hallwayToFrontDoor()">
+          
+        </map>
+  </div>
+
+</body>
+</html>
