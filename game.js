@@ -71,6 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+let scenarios = ["Menu", "Bedroom", "Hallway", "Goldroom", "Courtyard", "Exit"];
+
+
+
   
 
 

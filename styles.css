@@ -123,8 +123,8 @@ img {
 
 
 #dialogBox1 {
-  position: fixed;
-  bottom: 170px;
+  position: relative;
+  bottom: 330px;
   left: 15px;
   padding: 5px;
   width: 350px;
