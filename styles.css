@@ -124,15 +124,21 @@ img {
 
 #dialogBox1 {
   position: relative;
-  bottom: 330px;
+  bottom: 200px;
   left: 15px;
   padding: 5px;
   width: 350px;
   height: 165px;
   background-size:cover;
   
-  
-  
+}
+
+#combLock {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  bottom: 330px;
+  right: 295px;
 }
 
 #dialogText {
@@ -172,4 +178,27 @@ area:active {
 
 area {
   cursor: grab;
+}
+
+#combLockContainer { 
+  height: 100vh;
+  max-height: 800px;
+  max-width: 800px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+#combinationContainer {
+  border: 2px solid black;
+  display: flex;
+  
+
+}
+
+.digits {
+  width: 19px;
 }

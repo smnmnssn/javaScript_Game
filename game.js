@@ -70,48 +70,88 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+//ARRAY?
 let scenarios = ["Menu", "Bedroom", "Hallway", "Goldroom", "Courtyard", "Exit"];
 
 
 
   
 
+//let allDigits = document.getElementsByClassName("digits");
+let digit1 = document.getElementById("digit1");
+let digit2 = document.getElementById("digit2");
+let digit3 = document.getElementById("digit3");
+let digit4 = document.getElementById("digit4");
+
+/*const digits = document.querySelectorAll('.digits');// Hämta alla div-element med klassen "digits"
 
 
-/*var a = 4; 4
+function plusOne() {
+   for (let i = 0; i < digits.length; i++) { // Loop genom alla div-element
+    let currentDigit = parseInt(digits[i].textContent); // Hämta och konvertera textinnehållet till ett nummer
+    
+    currentDigit++; // Addera 1 till siffran
 
-function foo(x) {
-  var b = a * x;  16
+    digits[i].textContent = currentDigit; // Uppdatera texten i div-elementet med den nya siffran
+}
+}
 
-    function bar(y) {
-      var c = y * b;
-      return c;
+digit1.addEventListener("click", (plusOne));
+
+
+console.log(digit1.textContent);
+console.log(currentNumber);*/
+
+
+
+
+
+
+
+//copypasta
+const correctCombination = [1, 3, 3, 7];  // Den rätta kombinationen som spelaren ska ange
+let playerInput = [];  // Array för att lagra spelarens siffror
+const digits = document.querySelectorAll('.digits'); // Hämta alla div-element med klassen "digits"
+
+
+digits.forEach((digit, index) => {                       // Lägg till en eventlyssnare på varje div-element
+  digit.addEventListener('click', function() {                                      
+    let currentDigit = parseInt(digit.textContent);  // Hämta och konvertera texten i det klickade elementet till ett nummer
+
+    if (currentDigit === 9) { // Om siffran är 9, sätt tillbaka den till 0, annars addera 1
+      currentDigit = 0;
+    } else {
+      currentDigit++;
+    }
+   
+    digit.textContent = currentDigit;  // Uppdatera texten i det klickade elementet med den nya siffran
+
+    playerInput.push(currentDigit); // Lägg till siffran i spelarens input-array
+
+     // Om index är mindre än längden på correctCombination, fyll på playerInput med siffran
+     if (playerInput.length < correctCombination.length) {
+      playerInput[index] = currentDigit;  // Sätt rätt index i playerInput
+     }
+     
+    if (JSON.stringify(playerInput) === JSON.stringify(correctCombination)) { // Kontrollera om spelarens input matchar den rätta kombinationen
+      alert("Kombinationen är korrekt! Uppdraget är upplåst.");      // Här kan du lägga till kod för att "låsa upp" något, t.ex. visa ett meddelande eller öppna en dörr.
     }
 
+    console.log('Player Input:', playerInput.join(''));
+    console.log('Correct Combination:', correctCombination.join(''));
+    console.log('Clicked digit index:', index);   // Logga indexet för varje siffra som klickas
+    console.log('Current digit value:', currentDigit); // Logga värdet på den klickade siffran
 
-    return bar(b);
-}
-
-
-console.log( foo(a) );
-
-        //Vad loggar vi ut?
-
+  });
+});
 
 
+//const correctCombination = 1337;  // Den rätta kombinationen som spelaren ska ange
+
+
+ 
 
 
 
-// Define a function named reverse_a_number that takes a parameter n
-function reverse_a_number(n)
-{
-    // Convert the input number to a string
-    n = n + "";
 
-    // Split the string into an array of characters, reverse the array, and then join the characters back into a string
-    return n.split("").reverse().join("");
-}
 
-// Convert the reversed string back to a number and log it to the console
-console.log(Number(reverse_a_number(4321)));*/
