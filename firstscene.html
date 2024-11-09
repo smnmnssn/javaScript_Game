@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,44 +13,54 @@
     }
   </style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
 
 
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
-  
+
 </head>
+
 <body>
   <div>
-      <img id="scene_img" src="assets\Interior\Sovrum\bedroom_key3.png" usemap="#bedroom_map">
-      
-      <map name="bedroom_map">
-        <area shape="rect" coords="523,635,564,670" alt="Key under bed" id="bed_key" onclick="collectKey()">
-        <area shape="rect" coords="567,544,324,180" alt="Big wooden door" onclick="secondScene()">
-      </map>
-      
-      <!--<img id="popUpKey" src="assets\Interior\Foremal\popUpKey.png" alt="Nyckel">-->
+    <img id="scene_img" src="assets\Interior\Sovrum\bedroomgogo.png" usemap="#bedroom_map">
+    
+    
+    
 
-      <img src="assets\Foremal\combination-lock-151537_640.png" alt="combination lock" id="combLock">
+    
+    <map name="bedroom_map">
+      <area shape="rect" coords="459,682,602,793" alt="Golden key" id="goldenKey" onclick="collectKey()">
+      <area shape="rect" coords="508,554,347,201" alt="Big wooden door" onclick="secondScene()">
+      <area id="lockArea" shape="rect" coords="597,458,532,403" alt="Combination lock on door" onclick="combLock()">
+      <area shape="rect" coords="720,672,804,491" alt="Wooden drawer" id="openDrawer" onclick="openDrawer()">
+      <area shape="rect" coords="18,418,151,187" alt="Painting" id="painting" onclick="showPainting()">
+    </map>
 
-      <div id="dialogBox1" style="background-image: url(assets/Knappar/pokemonDialogBox.png)" ;>
-        <p id="dialogText"></p>
-      </div>
+    <!--<img id="popUpKey" src="assets\Interior\Foremal\popUpKey.png" alt="Nyckel">-->
+
+
+    <div id="dialogBox1" style="background-image: url(assets/Knappar/pokemonDialogBox.png)" ;>
+      <p id="dialogText"></p>
+    </div>
   </div>
 
-  
-  
-  
 
 
 
 
-   
+
+
+
+
 
 
 
 
 </body>
+
 </html>

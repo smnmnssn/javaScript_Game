@@ -1,6 +1,8 @@
 
 *,*:before,*:after{
- 
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
   padding:0;
   margin:0;
   box-sizing:border-box;
@@ -96,14 +98,34 @@ img {
   color: white;
 }
 
-#key {  
+/*#key {  
   position: relative;
   right: 20%;
   width: 10rem;
   height: 5rem;
   background: none;
+}*/
+
+#keyContainer {
+  position: relative;
+  right: 100px;
+  -webkit-perspective: 500px;
+  transform: rotate(55deg);
+  height: 300px;
 }
 
+#keyFull {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 170px;
+  bottom: 130px;
+  left: 350px;
+  transform: rotateY(-15deg);
+
+
+  
+}
 
 
 
@@ -141,6 +163,11 @@ img {
   right: 295px;
 }
 
+#lockArea {
+  position: relative;
+  z-index: 10;
+}
+
 #dialogText {
   position: relative;
   top: 15px;
@@ -161,6 +188,7 @@ img {
   position: relative;
   right: 22%;
   bottom: 200px;
+  
 }
 
 #magnifyingGlass {
@@ -180,7 +208,7 @@ area {
   cursor: grab;
 }
 
-#combLockContainer { 
+#mainContainer { 
   height: 100vh;
   max-height: 800px;
   max-width: 800px;
@@ -190,15 +218,55 @@ area {
   padding: 0px;
   overflow: hidden;
   border: 2px solid black;
-}
-
-#combinationContainer {
-  border: 2px solid black;
-  display: flex;
   
 
 }
 
+#btnContainer {
+
+}
+#backBtn {
+  position: relative;
+  right: 800px;
+  bottom: 670px;
+  width: 70px;
+  height: 70px;
+  cursor: grab;
+  -webkit-perspective: 500px;
+  -webkit-transform: rotateY(45deg);
+  transform: rotateY(45deg);
+}
+
+#backBtn:active {
+  cursor: grabbing;
+}
+
+
+#combinationContainer {
+  position: relative;
+  display: flex;
+  bottom: 310px;
+  left: 118px;
+  
+
+}
+
+#combinationContainer div {
+  width: 150px;
+  
+}
+
+
+#digit1 {
+
+}
+
+
 .digits {
-  width: 19px;
+  color: white;
+  font-size: 10rem;
+  padding: 0;
+  margin: 0;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900;
 }

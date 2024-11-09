@@ -15,12 +15,28 @@ function firstScene() {
 
 
 
+let haveNote = false;
 let haveKey = false;
 
 function collectKey() {
   haveKey = true;
   console.log("Key collected:", haveKey);
 
+}
+
+function collectNote() {
+  haveNote = true;
+  console.log("Have note: " + haveNote);
+}
+
+let backBtn = document.getElementById("backBtn");
+
+function goBack() {
+    history.back();
+};
+
+function showPainting() {
+  location.href = "painting.html";
 }
 
 function secondScene() {
@@ -47,6 +63,16 @@ function hallwayToFrontDoor() {
 function finalDoor() {
   if (haveKey)
   location.href = "lastscene.html"
+}
+
+function combLock() {
+  location.href = "combLock.html"
+
+}
+
+function openDrawer() {
+  location.href = "openDrawer.html"
+
 }
   
 
@@ -126,7 +152,7 @@ digits.forEach((digit, index) => {                       // Lägg till en eventl
    
     digit.textContent = currentDigit;  // Uppdatera texten i det klickade elementet med den nya siffran
 
-    playerInput.push(currentDigit); // Lägg till siffran i spelarens input-array
+    playerInput[index]= currentDigit; // Lägg till siffran i spelarens input-array
 
      // Om index är mindre än längden på correctCombination, fyll på playerInput med siffran
      if (playerInput.length < correctCombination.length) {
