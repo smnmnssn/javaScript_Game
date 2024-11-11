@@ -6,28 +6,43 @@ console.log(localStorage)
 
 
 
-
 function firstScene() {
-  // Skriv vad som ska hända när spelet startar
-  console.log("Spelet startar!");
   location.href = "firstscene.html";
 }
-
-
 
 let haveNote = false;
 let haveKey = false;
 
-function collectKey() {
-  haveKey = true;
-  console.log("Key collected:", haveKey);
+let key = document.getElementById("keyIcon");
+let note = document.getElementById("noteIcon");
+let gold = document.getElementById("goldenChestIcon")
 
+let inventory = JSON.parse(localStorage.getItem("inventoryContainer")) || [];
+
+
+function collectKey() {
+  if (!inventory.includes("key")) 
+    inventory.push("key");
+    localStorage.setItem("inventory", JSON.stringify(inventory));
+    document.getElementById("keyIcon").style.display = "block";
 }
 
 function collectNote() {
   haveNote = true;
-  console.log("Have note: " + haveNote);
+  document.getElementById("noteIcon").style.display = "block";
+  console.log("Note collected: " + haveNote);
+  if (!inventory.includes("note")) 
+    inventory.push("note");
+    localStorage.setItem("inventory", JSON.stringify(inventory));
 }
+
+function collectGold() {
+  document.getElementById("goldenChestIcon").style.display = "block";
+  if (!inventory.includes("gold")) 
+    inventory.push("gold");
+    localStorage.setItem("inventory", JSON.stringify(inventory));
+}
+
 
 let backBtn = document.getElementById("backBtn");
 
@@ -40,10 +55,15 @@ function showPainting() {
 }
 
 function secondScene() {
-  if (haveKey) {
+  if (inventory.includes("key")) 
     location.href = "secondscene.html";
 }
+
+
+function secondSceneFromGoldRoom() {
+    location.href = "secondscene.html";
 }
+
 
 function enterGoldenRoom() {
   location.href = "goldroom.html"
@@ -72,10 +92,10 @@ function combLock() {
 
 function openDrawer() {
   location.href = "openDrawer.html"
-
+  
 }
   
-
+//Textbox in first scene (bedroom)
 document.addEventListener("DOMContentLoaded", function() {
   // Texten som ska visas bokstav för bokstav
   const dialogText = "Välkommen till äventyret! Är du redo att utforska slottet och hitta skatten?";
@@ -86,6 +106,26 @@ document.addEventListener("DOMContentLoaded", function() {
   function showNextChar() {
     if (charIndex < dialogText.length) {
       dialogElement.innerHTML += dialogText[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+//Textbox in hallway
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const dialogText1 = "Två vägar att gå, in i rummet med den skinande dörren, eller fortsätta framåt..";
+  
+  const dialogElement = document.getElementById("dialogText1");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < dialogText1.length) {
+      dialogElement.innerHTML += dialogText1[charIndex];
       charIndex++;
       setTimeout(showNextChar, 50); // Justera hastigheten här
     }
@@ -160,7 +200,7 @@ digits.forEach((digit, index) => {                       // Lägg till en eventl
      }
      
     if (JSON.stringify(playerInput) === JSON.stringify(correctCombination)) { // Kontrollera om spelarens input matchar den rätta kombinationen
-      alert("Kombinationen är korrekt! Uppdraget är upplåst.");      // Här kan du lägga till kod för att "låsa upp" något, t.ex. visa ett meddelande eller öppna en dörr.
+      location.href = "openedchest.html";      // Här kan du lägga till kod för att "låsa upp" något, t.ex. visa ett meddelande eller öppna en dörr.
     }
 
     console.log('Player Input:', playerInput.join(''));

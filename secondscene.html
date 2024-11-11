@@ -6,6 +6,11 @@
   <title>Hallway</title>
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
 </head>
 <body>
   
@@ -17,6 +22,12 @@
           <area shape="rect" coords="166,100,281,553" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
           <area shape="rect" coords="439,140,613,420" alt="Go down hallway" id="hallway" onclick="hallwayToFrontDoor()">
         </map>
+
+
+        <div id="dialogBoxContainer">
+          <img id="dialogBox" src="assets\Knappar\dialogBox.png">
+          <p id="dialogText1"></p>
+        </div>
   </div>
 
 </body>

@@ -11,7 +11,14 @@
 
 </head>
 <body>
-  <img id="scene_img" src="assets\Interior\chestgoldjewels.png" usemap="#bedroom_map">
+  <img id="scene_img" src="assets\Interior\chestgoldjewels.png" usemap="#bedroom_map" onclick="(collectGold())">
+  <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+
+  <div id="inventoryContainer">
+    <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+    <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+    <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+  </div>
 
 </body>
 </html>

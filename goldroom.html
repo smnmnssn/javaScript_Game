@@ -11,11 +11,17 @@
 </head>
 <body>
   <div>
-    <img id="closed_chest_img" src="assets\Interior\chestkey.png" usemap="#goldroom_map">
+    <img id="closed_chest_img" src="assets\Interior\closed_chest.webp" usemap="#goldroom_map">
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+    <img src="assets\Foremal\newLock.png" alt="combination lock" id="combinationLock" onclick="combLock()">
     
+    <div id="inventoryContainer">
+      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon" onclick="goBack()">
+      <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon" onclick="goBack()">
+      <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon" onclick="goBack()">
+    </div>
+
     <map name="goldroom_map">
-      <area shape="rect" coords="140,500,213,546" alt="Key behind pillar" id="chest_key" onclick="collectKey()">
       <area shape="rect" coords="561,586,323,395" alt="Closed chest" onclick="openChest()">
     </map>
 

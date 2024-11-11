@@ -26,18 +26,35 @@
 </head>
 <body>
   
+  
+    <img id="scene_img" src="assets\Foremal\codedrawer.jpg" usemap="#drawer_map">
 
-    <img id="scene_img" src="assets\Foremal\codedrawer.jpg" usemap="#bedroom_map">
-
-    <map name="bedroom_map">
+    <map name="drawer_map">
       <area shape="rect" coords="280,185,671,661" alt="Note with code 1 3 3 7" id="noteCode" onclick="collectNote()">
       
     </map>
     
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
 
+    <div id="inventoryContainer">
+      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+      <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+      <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+    </div>
 
-
-
+    <script>
+      // Hämta inventory från localStorage och konvertera det till en array
+      const inventory = JSON.parse(localStorage.getItem("inventory")) || [];
+  
+      // Visa varje objekt i inventory
+      
+      inventory.forEach(item => {
+        if (item === "key") {
+          document.getElementById("keyIcon").style.display = "block";
+          ;
+        }
+        // Lägg till fler `if`-satser här om du har andra objekt att lägga till
+      });
+    </script>
 </body>
 </html>

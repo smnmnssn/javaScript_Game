@@ -27,24 +27,27 @@
 
 <body>
   <div>
-    <img id="scene_img" src="assets\Interior\Sovrum\bedroomgogo.png" usemap="#bedroom_map">
+    <img id="scene_img" src="assets\Sovrum\dadwad.png" usemap="#bedroom_map">
     
-    
-    
+    <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
 
-    
+      <div id="inventoryContainer">
+        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+        <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+        <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+      </div>
+
     <map name="bedroom_map">
       <area shape="rect" coords="459,682,602,793" alt="Golden key" id="goldenKey" onclick="collectKey()">
       <area shape="rect" coords="508,554,347,201" alt="Big wooden door" onclick="secondScene()">
-      <area id="lockArea" shape="rect" coords="597,458,532,403" alt="Combination lock on door" onclick="combLock()">
       <area shape="rect" coords="720,672,804,491" alt="Wooden drawer" id="openDrawer" onclick="openDrawer()">
       <area shape="rect" coords="18,418,151,187" alt="Painting" id="painting" onclick="showPainting()">
     </map>
 
     <!--<img id="popUpKey" src="assets\Interior\Foremal\popUpKey.png" alt="Nyckel">-->
 
-
-    <div id="dialogBox1" style="background-image: url(assets/Knappar/pokemonDialogBox.png)" ;>
+    <div id="dialogBoxContainer">
+      <img id="dialogBox" src="assets\Knappar\dialogBox.png">
       <p id="dialogText"></p>
     </div>
   </div>

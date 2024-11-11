@@ -122,36 +122,67 @@ img {
   bottom: 130px;
   left: 350px;
   transform: rotateY(-15deg);
+}
 
+#inventoryContainer {
+  display: flex;
+  justify-content: row;
+  border: 2px solid green;
+  position: relative;
+  bottom: 780px;
+  left: 200px;
+  padding: 5px;
+  width: 350px;
+}
 
+.inventoryIcons {
+  width: 60px;
+  border: 2px solid green;
+  display: none;
+}
+
+#combinationLock {
+    position: relative;
+    right: 498px;
+    bottom: 270px;
+    width: 60px;
+    height: 70px;
+    cursor: grab;
+    -webkit-perspective: 500px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-10deg);
   
 }
 
 
 
 #dialogBox {
-  position: fixed;
-  bottom: 170px;
-  left: 15px;
+  width: 470px;
+  height: 100px;
+}
+
+#dialogBoxContainer {
+  position: relative;
+  bottom: 130px;
+  left: 10px;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.8);
-  width:430px;
-  height:80px;
-  border: 2px solid white;
-  
-  
+  width:450px;
+  height: 150px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  borderDD: 5px solid greenyellow;
   
 }
 
-
-#dialogBox1 {
+#dialogText {
   position: relative;
-  bottom: 200px;
-  left: 15px;
-  padding: 5px;
-  width: 350px;
-  height: 165px;
-  background-size:cover;
+  top: -77px;
+  left: 30px;
+  width: 94%;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900;
   
 }
 
@@ -168,18 +199,7 @@ img {
   z-index: 10;
 }
 
-#dialogText {
-  position: relative;
-  top: 15px;
-  left: 15px;
-  width: 90%;
-  font-size: 20px;
-  text-shadow: 1px 1px 11px rgb(0, 208, 255); /* outline */
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900;
-  
-}
+
 
 #popUpKey {
   background: none;
@@ -212,11 +232,6 @@ area {
   height: 100vh;
   max-height: 800px;
   max-width: 800px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 0px;
-  overflow: hidden;
   border: 2px solid black;
   
 
@@ -235,6 +250,14 @@ area {
   -webkit-perspective: 500px;
   -webkit-transform: rotateY(45deg);
   transform: rotateY(45deg);
+  
+}
+
+#backBtnLock {
+  position: relative;
+  width: 45px;
+  bottom: 740px;
+  left: 20px;
 }
 
 #backBtn:active {
