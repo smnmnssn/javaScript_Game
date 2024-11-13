@@ -1,6 +1,3 @@
-localStorage.setItem("lol", "haha")
-
-localStorage.getItem("lol")
 
 console.log(localStorage)
 
@@ -15,40 +12,119 @@ let haveKey = false;
 
 let key = document.getElementById("keyIcon");
 let note = document.getElementById("noteIcon");
-let gold = document.getElementById("goldenChestIcon")
+let gold = document.getElementById("goldenChestIcon");
+let barrelKey = document.getElementById("barrelKey");
 
 let inventory = JSON.parse(localStorage.getItem("inventoryContainer")) || [];
 
+function updateInventoryDisplay() {
+  if (inventory.includes("key")) {
+      document.getElementById("keyIcon").style.display = "block";
+  }
+  if (inventory.includes("note")) {
+      document.getElementById("noteIcon").style.display = "block";
+  }
+  if (inventory.includes("gold")) {
+    document.getElementById("goldenChestIcon").style.display = "block";
+  }
+  if (inventory.includes("barrelKey")) {
+    document.getElementById("barrelKeyIcon").style.display = "block";
+  }
+}
+
+const backpack = document.getElementById("backpack");
+const inventoryContainer = document.getElementById("inventoryContainer");
+
+const originalImage = "assets/Interior/Foremal/b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png";
+const hoverImage = "assets/Interior/Foremal/image-removebg-preview.png";
+
+function showInventory() {
+  inventoryContainer.style.display = "block";
+  updateInventoryDisplay();
+}
+
+function closeInventory() {
+  if (inventoryContainer) 
+    inventoryContainer.style.display = "none";
+}
+
+function changeBackpackImage() {
+  console.log("Hover in: Changing backpack image"); // Debugging log
+  backpack.src = hoverImage; // Byt till hoverbild vid mouseenter
+}
+
+function resetBackpackImage() {
+  console.log("Hover out: Resetting backpack image"); // Debugging log
+  backpack.src = originalImage; // Återställ till originalbild vid mouseleave
+}
+
+backpack.addEventListener("mouseenter", () => {
+  console.log("mouseenter triggered"); // Kontrollera om eventen utlöses
+  showInventory();
+  changeBackpackImage();
+});
+
+backpack.addEventListener("mouseleave", () => {
+  console.log("mouseleave triggered"); // Kontrollera om eventen utlöses
+  closeInventory();
+  resetBackpackImage();
+});
 
 function collectKey() {
   if (!inventory.includes("key")) 
     inventory.push("key");
-    localStorage.setItem("inventory", JSON.stringify(inventory));
-    document.getElementById("keyIcon").style.display = "block";
+    localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
+    document.getElementById("key1DialogText").style.display = "block";
+    document.getElementById("dialogBoxKey1").style.display = "block";
+    document.getElementById("talkingHead").style.display = "block";
+
 }
 
 function collectNote() {
   haveNote = true;
-  document.getElementById("noteIcon").style.display = "block";
-  console.log("Note collected: " + haveNote);
   if (!inventory.includes("note")) 
     inventory.push("note");
-    localStorage.setItem("inventory", JSON.stringify(inventory));
+    localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
+    document.getElementById("noteDialogText").style.display = "block";
+    document.getElementById("dialogBoxNote").style.display = "block";
+    document.getElementById("talkingHead").style.display = "block";
+    
+
 }
 
 function collectGold() {
-  document.getElementById("goldenChestIcon").style.display = "block";
   if (!inventory.includes("gold")) 
     inventory.push("gold");
-    localStorage.setItem("inventory", JSON.stringify(inventory));
+    localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
+}
+
+function collectBarrelKey() {
+  if (!inventory.includes("barrelKey")) 
+    inventory.push("barrelKey");
+    localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
+    document.getElementById("dialogTextBarrelKey").style.display = "block";
+    document.getElementById("dialogBoxBarrelKey").style.display = "block";
+    document.getElementById("talkingHead").style.display = "block";
 }
 
 
 let backBtn = document.getElementById("backBtn");
 
+function closeDialogBox() {
+  document.getElementById("dialogBoxContainer").style.display = "none";
+}
+
 function goBack() {
     history.back();
-};
+}
+
+
+
+function keyDrawer() {
+  location.href = "keyDrawer.html"
+}
+
+
 
 function showPainting() {
   location.href = "painting.html";
@@ -57,6 +133,9 @@ function showPainting() {
 function secondScene() {
   if (inventory.includes("key")) 
     location.href = "secondscene.html";
+  else {
+    alert("Dörren är låst, det kanske finns en nyckel här någonstans?")
+  }
 }
 
 
@@ -69,20 +148,24 @@ function enterGoldenRoom() {
   location.href = "goldroom.html"
 }
 
-function openChest() {
-  if (haveKey) {
-    location.href = "openedchest.html"
-
-  }
-}
 
 function hallwayToFrontDoor() {
   location.href = "maindoor.html"
 }
 
+function showBarrelKey() {
+  location.href = "keyBarrel.html"
+
+}
+
+
+
 function finalDoor() {
-  if (haveKey)
+  if (inventory.includes("barrelKey"))
   location.href = "lastscene.html"
+  else {
+    alert("Dörren är låst, det kanske finns en nyckel här någonstans?")
+  }
 }
 
 function combLock() {
@@ -134,6 +217,137 @@ document.addEventListener("DOMContentLoaded", function() {
   // Starta bokstav-för-bokstav-animationen
   showNextChar();
 });
+
+//Textbox key 1 collected in drawer
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const key1DialogText = "Snyggt! Du hittar en nyckel och stoppar den i din ryggsäck, undra vad den är till?";
+  
+  const dialogElement = document.getElementById("key1DialogText");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < key1DialogText.length) {
+      dialogElement.innerHTML += key1DialogText[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+//Textbox note collected in drawer
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const noteDialogText = "Du hittar en mystisk lapp med någon slags kod som du stoppar ner i din ryggsäck.."
+  
+  const dialogElement = document.getElementById("noteDialogText");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < noteDialogText.length) {
+      dialogElement.innerHTML += noteDialogText[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+//Textbox goldroom
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const dialogTextGoldRoom = "En skattkista! Den är låst, så vi måste få upp låset på något sätt!"
+  
+  const dialogElement = document.getElementById("dialogTextGoldRoom");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < dialogTextGoldRoom.length) {
+      dialogElement.innerHTML += dialogTextGoldRoom[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+
+//Textbox opened chest room
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const dialogTextOpenedChest = "Wow! Du får upp kistan och fyller din ryggsäck med guld! "
+  
+  const dialogElement = document.getElementById("dialogTextOpenedChest");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < dialogTextOpenedChest.length) {
+      dialogElement.innerHTML += dialogTextOpenedChest[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+//Textbox last room main door
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const dialogTextMainDoor = "Detta ser ut att vara utgången..men porten är låst!"
+  
+  const dialogElement = document.getElementById("dialogTextMainDoor");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < dialogTextMainDoor.length) {
+      dialogElement.innerHTML += dialogTextMainDoor[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+
+//Textbox barrel key on collect
+document.addEventListener("DOMContentLoaded", function() {
+  // Texten som ska visas bokstav för bokstav
+  const dialogTextBarrelKey = "Denna nyckel ser ut att passa porten!"
+  
+  const dialogElement = document.getElementById("dialogTextBarrelKey");
+  let charIndex = 0;
+
+  function showNextChar() {
+    if (charIndex < dialogTextBarrelKey.length) {
+      dialogElement.innerHTML += dialogTextBarrelKey[charIndex];
+      charIndex++;
+      setTimeout(showNextChar, 50); // Justera hastigheten här
+    }
+  }
+  
+  // Starta bokstav-för-bokstav-animationen
+  showNextChar();
+});
+
+
+
+
+
+
+
+
+
 
 
 //ARRAY?
@@ -200,7 +414,8 @@ digits.forEach((digit, index) => {                       // Lägg till en eventl
      }
      
     if (JSON.stringify(playerInput) === JSON.stringify(correctCombination)) { // Kontrollera om spelarens input matchar den rätta kombinationen
-      location.href = "openedchest.html";      // Här kan du lägga till kod för att "låsa upp" något, t.ex. visa ett meddelande eller öppna en dörr.
+      location.href = "openedchest.html";
+      collectGold();      // Här kan du lägga till kod för att "låsa upp" något, t.ex. visa ett meddelande eller öppna en dörr.
     }
 
     console.log('Player Input:', playerInput.join(''));
@@ -209,6 +424,9 @@ digits.forEach((digit, index) => {                       // Lägg till en eventl
     console.log('Current digit value:', currentDigit); // Logga värdet på den klickade siffran
 
   });
+
+
+  
 });
 
 

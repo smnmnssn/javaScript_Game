@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallway</title>
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="game.js"></script>
+  
+    <!-- GOOGLE FONT PIXELFIY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <img src="assets\Interior\0_0.jpg" alt="Barrel with key" id="barrelKey" usemap="#barrel_map">
+
+  <map name="barrel_map">
+    <area shape="rect" coords="69,572,570,808" alt="Golden key" onclick="collectBarrelKey()">
+  </map>
+
+  <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+
+  <!-- Inventory -->
+  <div id="inventoryContainer">
+    <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+    <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+    <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+    <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+  </div>
+
+  <!-- BACKPACK -->
+  <div>
+    <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+    <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+  </div>
+
+
+
+    <!-- DIALOGBOX -->
+    <div id="dialogBoxContainer" onclick="closeDialogBox()">
+      <img id="dialogBoxBarrelKey" src="assets\Knappar\dialogBox.png">
+      <img id="talkingHead" src="assets\talkinghead2.png" style="display:none">
+      <p id="dialogTextBarrelKey"></p>
+    </div>
+
+</body>
+</html>

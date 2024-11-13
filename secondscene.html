@@ -6,28 +6,56 @@
   <title>Hallway</title>
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
+
+  <!-- GOOGLE FONT PIXELFIY -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+  <!-- UPDATE AND SHOW INVENTORY -->
+  
+  
 </head>
 <body>
   
   <div>
+    <!-- SCENE BACKGROUND -->
     <img id="scene_img" src="assets\Interior\4232.jpg" usemap="#hallway_map">
+
+    <!-- BACK BUTTON -->
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+    
+    <!-- IMG MAP WITH CLICKABLE AREAS -->
+    <map name="hallway_map">
+      <area shape="rect" coords="166,100,281,553" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
+    </map>
+
+    <!-- HALLWAY DOOR -->
+    <img src="assets\Interior\hallwayDoor.png" alt="Hallway door" id="hallwayDoor" onclick="hallwayToFrontDoor()">
+      
+    <!-- DIALOGBOX -->
+    <div id="dialogBoxContainer" onclick="closeDialogBox()">
+      <img id="dialogBox" src="assets\Knappar\dialogBox.png">
+      <img id="talkingHead" src="assets\talkinghead2.png">
+      <p id="dialogText1"></p>
+    </div>  
         
-        <map name="hallway_map">
-          <area shape="rect" coords="166,100,281,553" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
-          <area shape="rect" coords="439,140,613,420" alt="Go down hallway" id="hallway" onclick="hallwayToFrontDoor()">
-        </map>
+     <!-- Inventory -->
+    <div id="inventoryContainer">
+      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+    </div>
 
+    <!-- BACKPACK -->
+    <div>
+      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+    </div>
 
-        <div id="dialogBoxContainer">
-          <img id="dialogBox" src="assets\Knappar\dialogBox.png">
-          <p id="dialogText1"></p>
-        </div>
+    
+        
   </div>
 
 </body>

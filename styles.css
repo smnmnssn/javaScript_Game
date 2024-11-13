@@ -1,5 +1,5 @@
 
-*,*:before,*:after{
+* {
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none; 
@@ -7,8 +7,21 @@
   margin:0;
   box-sizing:border-box;
   font-family: "myFont", Verdana, Tahoma;
+
+   /* WIDTH: 1100px; STÖR AREAS FIXA PLS */
   width: 1100px;
-  cursor:pointer;
+  cursor: url("assets/Interior/Foremal/cursor5.png"), auto;
+  
+  
+  }
+
+ /* #scene_img { */
+  width: 640px;
+  height: 640px;
+ }
+
+  #firstSceneContainer {
+   
   }
 
   input,textarea{
@@ -24,17 +37,50 @@
   border:none;
   
   }
-  
+
   button:hover,input[type="submit"]{
   
-  cursor:pointer;
-  transform: translateY(-0.25em);
-  
-  }
-  
+    cursor:pointer;
+    transform: translateY(-0.25em);
+    
+    }
+
   li,a{
-  text-decoration:none;
+    text-decoration:none;
+    }
+  
+  #backpack {
+    position: fixed;
+    bottom: 515px;
+    left: 690px;
+    width: 100px;
+    height: 100px;
+    /* border: 2px solid green; */
+    
+
   }
+ 
+  #backpackOpen {
+    position: fixed;
+    bottom: 255px;
+    left: 690px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    
+  }
+
+  
+  
+ #talkingHead {
+  position: fixed;
+  bottom: 526px;
+  left: 350px;
+  width: 80px;
+  height: 78px;
+ }
+  
+  
 
 
 
@@ -98,93 +144,206 @@ img {
   color: white;
 }
 
-/*#key {  
-  position: relative;
-  right: 20%;
-  width: 10rem;
-  height: 5rem;
-  background: none;
-}*/
 
-#keyContainer {
-  position: relative;
-  right: 100px;
-  -webkit-perspective: 500px;
-  transform: rotate(55deg);
-  height: 300px;
-}
-
-#keyFull {
-  position: relative;
-  margin: 0 auto;
-  width: 200px;
-  height: 170px;
-  bottom: 130px;
-  left: 350px;
-  transform: rotateY(-15deg);
-}
 
 #inventoryContainer {
   display: flex;
-  justify-content: row;
-  border: 2px solid green;
+  flex-direction: column-reverse;
   position: relative;
-  bottom: 780px;
-  left: 200px;
+  bottom: 340px;
+  left: 710px;
   padding: 5px;
-  width: 350px;
+  width: 85px;
+  height: 250px;
+  
 }
 
 .inventoryIcons {
+  border: 3px solid rgb(141, 66, 37);
   width: 60px;
-  border: 2px solid green;
+  height: 60px;  
   display: none;
-}
-
-#combinationLock {
-    position: relative;
-    right: 498px;
-    bottom: 270px;
-    width: 60px;
-    height: 70px;
-    cursor: grab;
-    -webkit-perspective: 500px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(-10deg);
   
 }
 
 
 
+#combinationLock {
+  position: relative;
+  right: 498px;
+  bottom: 270px;
+  width: 60px;
+  height: 70px;
+  cursor: grab;
+  -webkit-perspective: 500px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(-10deg);   
+}
+
+#combinationLock:hover {
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+
+}
+
+.hidden {
+  display: none;
+}
+
+
 #dialogBox {
+  position: fixed;
+  bottom: 515px;
   width: 470px;
   height: 100px;
 }
 
-#dialogBoxContainer {
-  position: relative;
-  bottom: 130px;
-  left: 10px;
-  padding: 5px;
-  width:450px;
-  height: 150px;
-  background-size:cover;
-  background-repeat: no-repeat;
-  borderDD: 5px solid greenyellow;
-  
+
+#dialogBoxKey1 {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+  display: none;
 }
 
-#dialogText {
-  position: relative;
-  top: -77px;
+#key1DialogText {
+  position: fixed;
+  bottom: 527px;
   left: 30px;
-  width: 94%;
+  width: 340px;
   font-size: 20px;
   color: black;
   font-family: Pixelify Sans, Arial;
-  font-weight: 900;
+  font-weight: 900; 
+  display: none;
+}
+
+#dialogBoxNote {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+  display: none;
+}
+
+#noteDialogText {
+  position: fixed;
+  bottom: 527px;
+  left: 30px;
+  width: 320px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+  display: none;
+}
+
+#dialogBoxGoldRoom {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+ 
+}
+
+#dialogTextGoldRoom {
+  position: fixed;
+  bottom: 527px;
+  left: 30px;
+  width: 315px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
   
 }
+
+#dialogBoxOpenedChest {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+}
+#dialogTextOpenedChest {
+  position: fixed;
+  bottom: 533px;
+  left: 30px;
+  width: 320px;
+  font-size: 22px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+#dialogBoxMainDoor {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+}
+
+#dialogTextMainDoor {
+  position: fixed;
+  bottom: 525px;
+  left: 30px;
+  width: 325px;
+  font-size: 22px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+#dialogBoxBarrelKey {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+  display: none;
+}
+
+#dialogTextBarrelKey {
+  position: fixed;
+  bottom: 540px;
+  left: 30px;
+  width: 325px;
+  font-size: 22px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+  display: none;
+}
+
+#dialogText {
+  position: fixed;
+  bottom: 527px;
+  left: 30px;
+  width: 300px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+#dialogText1 {
+  position: fixed;
+  bottom: 527px;
+  left: 30px;
+  width: 340px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+#theGoldenKey {
+  position: relative;
+  width: 50px;
+  height: 95px;
+  bottom: 100px;
+  left: 515px;
+  rotate: 45deg;
+}
+
 
 #combLock {
   position: relative;
@@ -211,29 +370,27 @@ img {
   
 }
 
-#magnifyingGlass {
+#hallwayDoor {
   position: relative;
-  width:150px;
-  height: 150px;
-  bottom: 450px;
-  left: 320px;
+  width: 110px;
+  height: 180px;
+  bottom: 400px;
+  right: 395px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
-
 area:active {
-  cursor: grabbing;
+  cursor: url("assets/Interior/Foremal/icons8-magnifying-glass-tilted-left-48.png"), auto;
 }
 
 area {
-  cursor: grab;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
 #mainContainer { 
   height: 100vh;
   max-height: 800px;
   max-width: 800px;
-  border: 2px solid black;
-  
 
 }
 
@@ -242,8 +399,8 @@ area {
 }
 #backBtn {
   position: relative;
-  right: 800px;
-  bottom: 670px;
+  right: 815px;
+  bottom: 725px;
   width: 70px;
   height: 70px;
   cursor: grab;
@@ -268,7 +425,7 @@ area {
 #combinationContainer {
   position: relative;
   display: flex;
-  bottom: 310px;
+  bottom: 375px;
   left: 118px;
   
 

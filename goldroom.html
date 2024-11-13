@@ -7,7 +7,11 @@
 
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
 </head>
 <body>
   <div>
@@ -15,20 +19,33 @@
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
     <img src="assets\Foremal\newLock.png" alt="combination lock" id="combinationLock" onclick="combLock()">
     
+    <!-- Inventory -->
     <div id="inventoryContainer">
-      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon" onclick="goBack()">
-      <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon" onclick="goBack()">
-      <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon" onclick="goBack()">
+      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+    </div>
+
+    <!-- BACKPACK -->
+    <div>
+      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
     </div>
 
     <map name="goldroom_map">
-      <area shape="rect" coords="561,586,323,395" alt="Closed chest" onclick="openChest()">
+      <area shape="rect" coords="561,586,323,395" alt="Closed chest">
     </map>
 
-  
-
+    <!-- DIALOGBOX -->
+    <div id="dialogBoxContainer" onclick="closeDialogBox()">
+      <img id="dialogBoxGoldRoom" src="assets\Knappar\dialogBox.png">
+      <img id="talkingHead" src="assets\talkinghead2.png">
+      <p id="dialogTextGoldRoom"></p>
+    </div>
+    
     
 
-</div>
+  </div>
 </body>
 </html>

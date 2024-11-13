@@ -4,14 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bedroom</title>
-
-  <style type="text/css">
-    @font-face {
-      font-family: "myFont";
-      src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf) format("truetype");
-    }
-  </style>
+  <title>Key drawer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,24 +15,21 @@
 
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
-
-  <!-- <script>window.onload = function() { updateInventoryDisplay()};</script>  -->
 </head>
 
 <body>
-  <div id="firstSceneContainer">
-    
-    <img id="scene_img" src="assets\Sovrum\0_0_640_N.webp" usemap="#bedroom_map">
-    
-    <map name="bedroom_map">
-      <area shape="rect" coords="111,581,6,461" alt="Golden key" id="goldenKey" onclick="keyDrawer()">
-      <area shape="rect" coords="426,457,266,207" alt="Big wooden door" onclick="secondScene()">
-      <area shape="rect" coords="639,544,525,358" alt="Wooden drawer" id="openDrawer" onclick="openDrawer()">
-      <area shape="rect" coords="18,418,151,187" alt="Painting" id="painting" onclick="showPainting()">
+  <div>
+    <!-- SCENE IMAGE -->
+    <img src="assets\Foremal\drawer.png" alt="Golden key inside drawer" id="insideKeyDrawer" usemap="#keyDrawer_map">
+
+    <!-- IMAGE MAP -->
+    <map name="keyDrawer_map">
+      <area shape="rect" coords="160,259,579,477" alt="Golden key" onclick="collectKey()">
     </map>
 
+    <!-- BACK BTN -->
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
-    
+
     <!-- Inventory -->
     <div id="inventoryContainer">
       <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
@@ -53,29 +43,15 @@
       <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
       <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
     </div>
-  
+    
+    <!-- DIALOGBOX -->
+    <div id="dialogBoxKey1Container" onclick="closeDialogBox()">
+      <img id="dialogBoxKey1" src="assets\Knappar\dialogBox.png">
+      <img id="talkingHead" src="assets\Interior\Foremal\thead3.png" style="display: none;">
+      <p id="key1DialogText"></p>
+    </div>
 
-
-      <!-- DIALOGBOX -->
-      <div id="dialogBoxContainer" onclick="closeDialogBox()">
-        <img id="dialogBox" src="assets\Knappar\dialogBox.png">
-        <img id="talkingHead" src="assets\Interior\Foremal\thead3.png">
-        <p id="dialogText"></p>
-      </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

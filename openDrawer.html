@@ -22,7 +22,6 @@
 
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
-
 </head>
 <body>
   
@@ -36,25 +35,27 @@
     
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
 
-    <div id="inventoryContainer">
-      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-      <img src="assets\Knappar\keyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-      <img src="assets\Interior\chest_gold.webp" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-    </div>
+    <!-- Inventory -->
+  <div id="inventoryContainer">
+    <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+    <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+    <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+    <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+  </div>
 
-    <script>
-      // Hämta inventory från localStorage och konvertera det till en array
-      const inventory = JSON.parse(localStorage.getItem("inventory")) || [];
-  
-      // Visa varje objekt i inventory
-      
-      inventory.forEach(item => {
-        if (item === "key") {
-          document.getElementById("keyIcon").style.display = "block";
-          ;
-        }
-        // Lägg till fler `if`-satser här om du har andra objekt att lägga till
-      });
-    </script>
+  <!-- BACKPACK -->
+  <div>
+    <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+    <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+  </div>
+
+  <!-- DIALOGBOX -->
+  <div id="dialogBoxContainer" onclick="closeDialogBox()">
+    <img id="dialogBoxNote" src="assets\Knappar\dialogBox.png">
+    <img id="talkingHead" src="assets\talkinghead2.png" style="display: none;">
+    <p id="noteDialogText"></p>
+  </div>
+
+    
 </body>
 </html>
