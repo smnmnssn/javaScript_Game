@@ -104,9 +104,11 @@ function collectBarrelKey() {
   if (!inventory.includes("barrelKey")) 
     inventory.push("barrelKey");
     localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
-    document.getElementById("dialogTextBarrelKey").style.display = "block";
+    document.getElementById("dialogTextBarrelKey").style.display = "block";   
     document.getElementById("dialogBoxBarrelKey").style.display = "block";
-    document.getElementById("talkingHead").style.display = "block";
+    document.getElementById("talkingHeadBarrel").style.display = "block";
+    document.getElementById("dialogBoxContainerBarrel").style.display = "block";
+
 }
 
 
