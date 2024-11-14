@@ -39,13 +39,13 @@ const originalImage = "assets/Interior/Foremal/b3b5f4da-d678-4ba2-88ed-adc93f1a3
 const hoverImage = "assets/Interior/Foremal/image-removebg-preview.png";
 
 function showInventory() {
-  inventoryContainer.style.display = "block";
+  inventoryContainer.style.display = "flex";
   updateInventoryDisplay();
 }
 
 function closeInventory() {
   if (inventoryContainer) 
-    inventoryContainer.style.display = "none";
+    inventoryContainer.style.display = "";
 }
 
 function changeBackpackImage() {
@@ -76,8 +76,10 @@ function collectKey() {
     localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
     document.getElementById("key1DialogText").style.display = "block";
     document.getElementById("dialogBoxKey1").style.display = "block";
+    document.getElementById("talkingHeadKeyDrawer").style.display = "block";
     document.getElementById("talkingHead").style.display = "block";
-
+    
+  
 }
 
 function collectNote() {
@@ -87,7 +89,7 @@ function collectNote() {
     localStorage.setItem("inventoryContainer", JSON.stringify(inventory));
     document.getElementById("noteDialogText").style.display = "block";
     document.getElementById("dialogBoxNote").style.display = "block";
-    document.getElementById("talkingHead").style.display = "block";
+    document.getElementById("talkingHeadNoteDrawer").style.display = "block";
     
 
 }
@@ -201,14 +203,14 @@ document.addEventListener("DOMContentLoaded", function() {
 //Textbox in hallway
 document.addEventListener("DOMContentLoaded", function() {
   // Texten som ska visas bokstav för bokstav
-  const dialogText1 = "Två vägar att gå, in i rummet med den skinande dörren, eller fortsätta framåt..";
+  const dialogTextHallway = "Två vägar att gå, in i rummet med den skinande dörren, eller fortsätta framåt..";
   
-  const dialogElement = document.getElementById("dialogText1");
+  const dialogElement = document.getElementById("dialogTextHallway");
   let charIndex = 0;
 
   function showNextChar() {
-    if (charIndex < dialogText1.length) {
-      dialogElement.innerHTML += dialogText1[charIndex];
+    if (charIndex < dialogTextHallway.length) {
+      dialogElement.innerHTML += dialogTextHallway[charIndex];
       charIndex++;
       setTimeout(showNextChar, 50); // Justera hastigheten här
     }

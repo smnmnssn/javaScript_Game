@@ -14,12 +14,18 @@
     rel="stylesheet">
 </head>
 <body>
-  <div>
+  <div id="goldRoomContainer">
     <img id="closed_chest_img" src="assets\Interior\closed_chest.webp" usemap="#goldroom_map">
-    <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+    <img src="assets/Knappar/back.png" alt="Back button" id="backBtnGoldRoom" onclick="goBack()">
     <img src="assets\Foremal\newLock.png" alt="combination lock" id="combinationLock" onclick="combLock()">
+
+    <!-- BACKPACK -->
+    <div id="backPackContainerGoldRoom">
+      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+    </div>
     
-    <!-- Inventory -->
+    <!-- INVENTORY -->
     <div id="inventoryContainer">
       <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
       <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
@@ -27,24 +33,20 @@
       <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
     </div>
 
-    <!-- BACKPACK -->
-    <div>
-      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-    </div>
+    
 
+    <!-- IMAGE MAP  -->
     <map name="goldroom_map">
       <area shape="rect" coords="561,586,323,395" alt="Closed chest">
     </map>
 
-    <!-- DIALOGBOX -->
-    <div id="dialogBoxContainer" onclick="closeDialogBox()">
+  
+    <!-- DIALOG BOX -->
+    <div id="dialogBoxContainerGoldRoom" onclick="closeDialogBox()">
       <img id="dialogBoxGoldRoom" src="assets\Knappar\dialogBox.png">
-      <img id="talkingHead" src="assets\talkinghead2.png">
+      <img id="talkingHeadGoldRoom" src="assets\Interior\Foremal\thead3.png">
       <p id="dialogTextGoldRoom"></p>
     </div>
-    
-    
 
   </div>
 </body>

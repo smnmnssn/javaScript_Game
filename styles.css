@@ -9,20 +9,138 @@
   font-family: "myFont", Verdana, Tahoma;
 
    /* WIDTH: 1100px; STÖR AREAS FIXA PLS */
-  width: 1100px;
+  
   cursor: url("assets/Interior/Foremal/cursor5.png"), auto;
-  
-  
+
   }
 
- /* #scene_img { */
+  body {
+    width: 640px;
+   height: 640px;
+  }
+
+  #scene_img { 
+  display: flex;
   width: 640px;
   height: 640px;
  }
 
-  #firstSceneContainer {
-   
+#painting {
+    width: 640px;
+    height: 640px;
   }
+
+ #paintingContainer {
+  display: flex;
+  width: 640px;
+  height: 640px;
+ }
+
+ #backBtnPainting {
+  position:relative;
+  right: 640px;
+  width: 75px;
+  height: 70px;
+  cursor: grab;
+ }
+  
+ #noteDrawerContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+ }
+
+ #backPackContainerNote {
+  display: flex;
+  position: relative;
+  top: 500px;
+  right: 100px;  
+  height: 100px;
+ }
+
+ #hallwayContainer {
+    position: relative;
+    max-width: 640px;
+    max-height: 640px;
+ }
+
+ #dialogBoxContainerHallway {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+ }
+
+ #backPackContainerHallway {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 363px; 
+  left: 542px;
+  width: 100px;
+  }
+
+ #dialogBoxHallway {
+  position: absolute;
+  bottom: -9px;
+  left: 2px;
+  width: 400px;
+  height: 100px;
+  
+ }
+
+ #talkingHeadHallway {
+  position: relative;
+  bottom: 2px;
+  left: 302px;
+  width: 68px;
+  height: 78px;
+  
+ }
+
+ #dialogTextHallway {
+  position: absolute; 
+  bottom: 6px;
+  left: 30px;
+  width: 275px;
+  line-height: 1.1rem;
+  font-size: 19px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+  
+ }
+
+ #backBtnHallway {
+  position:relative;
+  left: -10px;
+  bottom: 749px;
+  width: 70px;
+  height: 70px;
+  cursor: grab;
+  transform: rotateY(45deg);
+ }
+
+ #inventoryContainer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 46%; 
+  right: 1%; 
+  display: none;
+  margin: 0;
+  width: 65px;
+  display: none;
+  
+}
+
+.inventoryIcons {
+  border: 3px solid rgb(174, 0, 255);
+  width: 60px;
+  height: 60px;  
+  margin: 0;
+  border-radius: 55px;
+}
 
   input,textarea{
   
@@ -49,38 +167,146 @@
     text-decoration:none;
     }
   
-  #backpack {
-    position: fixed;
-    bottom: 515px;
-    left: 690px;
-    width: 100px;
-    height: 100px;
-    /* border: 2px solid green; */
-    
+#firstSceneContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
 
-  }
+#drawerKeySceneContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+#insideKeyDrawer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+
+#backPackContainer {
+display: flex;
+position: relative;
+justify-content: flex-end;
+bottom: 102px; 
+left: 542px;
+width: 100px;
+}
+
+#backpack {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid green; */
+  
+
+} /*VARFÖR FLYTTAR SIG ELEMENTEN??? WIDTH BODY 640px?*/
  
   #backpackOpen {
-    position: fixed;
-    bottom: 255px;
-    left: 690px;
-    width: 100px;
-    height: 100px;
-    display: none;
-    
+    display: none; 
   }
 
-  
-  
+
  #talkingHead {
-  position: fixed;
-  bottom: 526px;
+  position: relative;
+  bottom:-11px;
+  right: 100px;
+  width: 80px;
+  height: 78px;
+
+ }
+
+ #talkingHeadKeyDrawer {
+  position: relative;
+  bottom: 1px;
+  left: 355px;
+  width: 80px;
+  height: 78px;
+  display: none;
+ }
+
+ #talkingHeadNoteDrawer {
+  position: relative;
+  bottom:-11px;
   left: 350px;
   width: 80px;
   height: 78px;
+  display:none;
+
  }
   
+ #goldRoomContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+ } 
   
+#dialogBoxContainerGoldRoom {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 279px;
+  
+}
+
+#backPackContainerGoldRoom {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 178px; 
+  left: 542px;
+  width: 100px;
+}
+
+#dialogBoxGoldRoom {
+  margin: 0;
+  padding: 0;
+  position: relative; 
+  width: 470px;
+  height: 100px;
+}
+
+#talkingHeadGoldRoom {
+  position: relative;
+  bottom:-11px;
+  right: 100px;
+  width: 80px;
+  height: 78px;
+
+}
+
+#dialogTextGoldRoom {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+ bottom: 15px;
+  width: 285px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900;
+}
+
+#backBtnGoldRoom {
+  position:relative;
+  left: -10px;
+  bottom: 643px;
+  width: 70px;
+  height: 70px;
+  cursor: grab;
+  transform: rotateY(45deg);
+}
+
+ #closed_chest_img {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+ }
 
 
 
@@ -94,10 +320,7 @@
   padding: 0px;
 }
 
-img {
-  max-height: 800px;
-  max-width: 800px;
-}
+
 
 
 #newgame_btn {
@@ -146,36 +369,13 @@ img {
 
 
 
-#inventoryContainer {
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  bottom: 340px;
-  left: 710px;
-  padding: 5px;
-  width: 85px;
-  height: 250px;
-  
-}
-
-.inventoryIcons {
-  border: 3px solid rgb(141, 66, 37);
-  width: 60px;
-  height: 60px;  
-  display: none;
-  
-}
-
-
-
 #combinationLock {
   position: relative;
-  right: 498px;
-  bottom: 270px;
-  width: 60px;
+  left: 223px;
+  bottom: 275px;
+  width: 70px;
   height: 70px;
   cursor: grab;
-  -webkit-perspective: 500px;
   -webkit-transform: rotate(45deg);
   transform: rotate(-10deg);   
 }
@@ -190,25 +390,66 @@ img {
 }
 
 
+#dialogBoxContainer {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+}
+
+
 #dialogBox {
-  position: fixed;
-  bottom: 515px;
+  margin: 0;
+  padding: 0;
+  position: relative; 
   width: 470px;
   height: 100px;
 }
 
+#dialogText {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+ bottom: 15px;
+  width: 285px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
 
+#dialogBoxKey1Container {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+}
 #dialogBoxKey1 {
-  position: fixed;
-  bottom: 515px;
+  position: absolute;
+  bottom: -10px;
   width: 470px;
   height: 100px;
   display: none;
 }
 
-#key1DialogText {
+#dialogText1 {
   position: fixed;
   bottom: 527px;
+  left: 30px;
+  width: 340px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+
+
+
+#key1DialogText {
+  position: absolute;
+  bottom: 6px;
   left: 30px;
   width: 340px;
   font-size: 20px;
@@ -218,18 +459,24 @@ img {
   display: none;
 }
 
+#dialogBoxNoteContainer {
+  position: absolute;  
+  width: 470px;
+  height: 100px;
+  top:540px;
+}
+
 #dialogBoxNote {
-  position: fixed;
-  bottom: 515px;
+  position: absolute;  
   width: 470px;
   height: 100px;
   display: none;
 }
 
 #noteDialogText {
-  position: fixed;
-  bottom: 527px;
-  left: 30px;
+  position: absolute;
+  bottom: 15px;
+  left: 27px;
   width: 320px;
   font-size: 20px;
   color: black;
@@ -238,42 +485,7 @@ img {
   display: none;
 }
 
-#dialogBoxGoldRoom {
-  position: fixed;
-  bottom: 515px;
-  width: 470px;
-  height: 100px;
- 
-}
 
-#dialogTextGoldRoom {
-  position: fixed;
-  bottom: 527px;
-  left: 30px;
-  width: 315px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  
-}
-
-#dialogBoxOpenedChest {
-  position: fixed;
-  bottom: 515px;
-  width: 470px;
-  height: 100px;
-}
-#dialogTextOpenedChest {
-  position: fixed;
-  bottom: 533px;
-  left: 30px;
-  width: 320px;
-  font-size: 22px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-}
 
 #dialogBoxMainDoor {
   position: fixed;
@@ -313,27 +525,7 @@ img {
   display: none;
 }
 
-#dialogText {
-  position: fixed;
-  bottom: 527px;
-  left: 30px;
-  width: 300px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-}
 
-#dialogText1 {
-  position: fixed;
-  bottom: 527px;
-  left: 30px;
-  width: 340px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-}
 
 #theGoldenKey {
   position: relative;
@@ -374,8 +566,8 @@ img {
   position: relative;
   width: 110px;
   height: 180px;
-  bottom: 400px;
-  right: 395px;
+  bottom: 490px;
+  left: 300px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
@@ -387,46 +579,28 @@ area {
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
-#mainContainer { 
-  height: 100vh;
-  max-height: 800px;
-  max-width: 800px;
-
+#combinationSceneContainer { 
+    display: flex;
+    position: relative;
+    width: 640px;
+    height: 640px;
+    background: black;
 }
 
-#btnContainer {
-
+#combinationLockImage {
+  position: absolute;
+  width: 640px;
+  height: 640px;
 }
-#backBtn {
-  position: relative;
-  right: 815px;
-  bottom: 725px;
-  width: 70px;
-  height: 70px;
-  cursor: grab;
-  -webkit-perspective: 500px;
-  -webkit-transform: rotateY(45deg);
-  transform: rotateY(45deg);
-  
-}
-
-#backBtnLock {
-  position: relative;
-  width: 45px;
-  bottom: 740px;
-  left: 20px;
-}
-
-#backBtn:active {
-  cursor: grabbing;
-}
-
 
 #combinationContainer {
   position: relative;
   display: flex;
-  bottom: 375px;
-  left: 118px;
+  height: 200px;
+  width: 500px;
+  top: 370px;
+  left: 13px;
+  
   
 
 }
@@ -436,6 +610,90 @@ area {
   
 }
 
+#openedChestContainer {
+  display: flex;
+  position: relative;
+  width: 640px;
+  height: 640px;
+
+}
+
+#backPackContainerOpenedChest {
+  display: flex;
+  position: relative;
+  top: 538px;
+  right: 140px;  
+  height: 100px;
+ }
+
+#dialogBoxContainerOpenedChest {
+  display: flex;
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  top: 537px;
+}
+
+
+#dialogBoxOpenedChest {
+  position: absolute;
+  bottom: px;
+  width: 402px;
+  height: 100px;
+}
+
+#dialogTextOpenedChest {
+  position: absolute;
+  top: 15px;
+  left: 22px;
+  width: 255px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, Arial;
+  font-weight: 900; 
+}
+
+#talkingHeadOpenedChest {
+  position: absolute;
+  top: 11px;
+  right:30px;
+  width: 68px;
+  height: 78px;
+}
+
+#backBtnOpenedChest {
+  position:relative;
+  right: 635px;
+  height: 75px;
+  cursor: grab;
+}
+
+#backBtn {
+  position:relative;
+  left: -10px;
+  bottom: 739px;
+  width: 70px;
+  height: 70px;
+  cursor: grab;
+  transform: rotateY(45deg);
+  
+}
+
+#backBtnLock {
+    position:relative;
+    left:-10px;
+    bottom: px;
+    width: 70px;
+    height: 70px;
+    cursor: grab;
+    transform: rotateY(45deg);
+}
+
+
+
+#backBtn:active {
+  cursor: grabbing;
+}
 
 #digit1 {
 

@@ -29,6 +29,7 @@
 <body>
   <div id="firstSceneContainer">
     
+  
     <img id="scene_img" src="assets\Sovrum\0_0_640_N.webp" usemap="#bedroom_map">
     
     <map name="bedroom_map">
@@ -37,9 +38,15 @@
       <area shape="rect" coords="639,544,525,358" alt="Wooden drawer" id="openDrawer" onclick="openDrawer()">
       <area shape="rect" coords="18,418,151,187" alt="Painting" id="painting" onclick="showPainting()">
     </map>
+    
+    <!-- BACKPACK -->
+    <div id="backPackContainer">
+      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+    </div>
 
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
-    
+      
     <!-- Inventory -->
     <div id="inventoryContainer">
       <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
@@ -48,14 +55,7 @@
       <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
     </div>
 
-    <!-- BACKPACK -->
-    <div>
-      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-    </div>
-  
-
-
+    
       <!-- DIALOGBOX -->
       <div id="dialogBoxContainer" onclick="closeDialogBox()">
         <img id="dialogBox" src="assets\Knappar\dialogBox.png">

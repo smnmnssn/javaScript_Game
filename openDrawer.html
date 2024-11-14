@@ -24,38 +24,43 @@
   <script defer src="game.js"></script>
 </head>
 <body>
-  
+  <div id="noteDrawerContainer">
   
     <img id="scene_img" src="assets\Foremal\codedrawer.jpg" usemap="#drawer_map">
 
     <map name="drawer_map">
-      <area shape="rect" coords="280,185,671,661" alt="Note with code 1 3 3 7" id="noteCode" onclick="collectNote()">
-      
+      <area shape="rect" coords="135,191,492,481" alt="Note with code 1 3 3 7" id="noteCode" onclick="collectNote()">  
     </map>
+
+    <!-- BACKPACK -->  
+    <div id="backPackContainer">
+      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+    </div>
+    
     
     <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
 
     <!-- Inventory -->
-  <div id="inventoryContainer">
-    <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-    <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-    <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-    <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-  </div>
+    <div id="inventoryContainer">
+      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+    </div>
 
-  <!-- BACKPACK -->
-  <div>
-    <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-    <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-  </div>
+    
 
-  <!-- DIALOGBOX -->
-  <div id="dialogBoxContainer" onclick="closeDialogBox()">
-    <img id="dialogBoxNote" src="assets\Knappar\dialogBox.png">
-    <img id="talkingHead" src="assets\talkinghead2.png" style="display: none;">
-    <p id="noteDialogText"></p>
-  </div>
+    <!-- DIALOGBOX -->
+    <div id="dialogBoxNoteContainer" onclick="closeDialogBox()">
+      <img id="dialogBoxNote" src="assets\Knappar\dialogBox.png">
+      <img id="talkingHeadNoteDrawer" src="assets\Interior\Foremal\thead3.png">
+      <p id="noteDialogText"></p>
+    </div>
 
+  
+    
+  </div>  
     
 </body>
 </html>
