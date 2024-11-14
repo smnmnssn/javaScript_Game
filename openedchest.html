@@ -14,39 +14,43 @@
     rel="stylesheet">
 </head>
 <body>
+  <div id="megaContainer">
+    <!-- FRAME  -->
+    <img id="borderFrameOpenedChest" src="assets\newborder.png">
 
-  <div id="openedChestContainer">
-    <img id="scene_img" src="assets\Interior\chestgoldjewels.png" usemap="#goldRoom_map">
+    <div id="openedChestContainer">
+      <img id="scene_img" src="assets\Interior\chestgoldjewels.png" usemap="#goldRoom_map">
 
-    <map name="goldRoom_map">
-      <area shape="rect" coords="156,185,638,654" alt="Golden chest" id="goldChestArea" onclick="collectGold()">
-    </map>
+      <map name="goldRoom_map">
+        <area shape="rect" coords="156,185,638,654" alt="Golden chest" id="goldChestArea" onclick="collectGold()">
+      </map>
 
-    <img src="assets/Knappar/back.png" alt="Back button" id="backBtnOpenedChest" onclick="goBack()">
+      <img src="assets/Knappar/back.png" alt="Back button" id="backBtnOpenedChest" onclick="enterGoldenRoom()">
+        
+      <!-- INVENTORY -->
+      <div id="inventoryContainer">
+        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+        <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+        <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+        <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+      </div>
+
+      <!-- BACKPACK -->
+      <div id="backPackContainerOpenedChest">
+        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+      </div>
+
       
-    <!-- INVENTORY -->
-    <div id="inventoryContainer">
-      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-    </div>
-
-    <!-- BACKPACK -->
-    <div id="backPackContainerOpenedChest">
-      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-    </div>
-
-    
-      <!-- DIALOG BOX -->
-    <div id="dialogBoxContainerOpenedChest" onclick="closeDialogBox()">
-      <img id="dialogBoxOpenedChest" src="assets\Knappar\dialogBox.png">
-      <img id="talkingHeadOpenedChest" src="assets\Interior\Foremal\thead3.png">
-      <p id="dialogTextOpenedChest"></p>
-    </div>
+        <!-- DIALOG BOX -->
+      <div id="dialogBoxContainerOpenedChest" onclick="closeDialogBox()">
+        <img id="dialogBoxOpenedChest" src="assets\Knappar\dialogBox.png">
+        <img id="talkingHeadOpenedChest" src="assets\Interior\Foremal\thead3.png">
+        <p id="dialogTextOpenedChest"></p>
+      </div>
 
 
-    </div>
+      </div>
+  </div>
 </body>
 </html>

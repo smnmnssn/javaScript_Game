@@ -17,48 +17,50 @@
   
 </head>
 <body>
-  
-  <div id="hallwayContainer">
-    <!-- SCENE BACKGROUND -->
-    <img id="scene_img" src="assets\Interior\4232.jpg" usemap="#hallway_map">
+  <div id="megaContainer">
+    <!-- FRAME  -->
+    <img id="borderFrame" src="assets\newborder.png">
+    <div id="hallwayContainer">
+      <!-- SCENE BACKGROUND -->
+        <img id="scene_img" src="assets\Interior\4232.jpg" usemap="#hallway_map">
 
-    <!-- BACK BUTTON -->
-    <img src="assets/Knappar/back.png" alt="Back button" id="backBtnHallway" onclick="goBack()">
-    
-    <!-- IMG MAP WITH CLICKABLE AREAS -->
-    <map name="hallway_map">
-      <area shape="rect" coords="61,16,226,679" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
-    </map>
-
-    
-
-    <!-- HALLWAY DOOR -->
-    <img src="assets\Interior\hallwayDoor.png" alt="Hallway door" id="hallwayDoor" onclick="hallwayToFrontDoor()">
+      <!-- BACK BUTTON -->
+      <img src="assets/Knappar/back.png" alt="Back button" id="backBtnHallway" onclick="firstScene()">
       
-    
-        
-     <!-- Inventory -->
-    <div id="inventoryContainer">
-      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-    </div>
+      <!-- IMG MAP WITH CLICKABLE AREAS -->
+      <map name="hallway_map">
+        <area shape="rect" coords="61,16,226,679" alt="Golden door" id="golden_door" onclick="enterGoldenRoom()">
+      </map>
 
-    <!-- DIALOGBOX -->
-    <div id="dialogBoxContainerHallway" onclick="closeDialogBox()">
-      <img id="dialogBoxHallway" src="assets\Knappar\dialogBox.png">
-      <img id="talkingHeadHallway" src="assets\Interior\Foremal\thead3.png">
-      <p id="dialogTextHallway"></p>
-    </div>
+      
 
-    <!-- BACKPACK -->
-    <div id="backPackContainerHallway">
-      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-    </div>
+      <!-- HALLWAY DOOR -->
+      <img src="assets\Interior\hallwayDoor.png" alt="Hallway door" id="hallwayDoor" onclick="hallwayToFrontDoor()">
         
+      
+          
+      <!-- Inventory -->
+      <div id="inventoryContainer">
+        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+        <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+        <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+        <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+      </div>
+
+      <!-- DIALOGBOX -->
+      <div id="dialogBoxContainerHallway" onclick="closeDialogBox()">
+        <img id="dialogBoxHallway" src="assets\Knappar\dialogBox.png">
+        <img id="talkingHeadHallway" src="assets\Interior\Foremal\thead3.png">
+        <p id="dialogTextHallway"></p>
+      </div>
+
+      <!-- BACKPACK -->
+      <div id="backPackContainerHallway">
+        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+      </div>
+          
+    </div>
   </div>
-
 </body>
 </html>

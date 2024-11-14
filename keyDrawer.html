@@ -18,44 +18,51 @@
 </head>
 
 <body>
-  <div id="drawerKeySceneContainer">
-    
-    <!-- SCENE IMAGE -->
-    <img src="assets\Foremal\drawer.png" alt="Golden key inside drawer" id="insideKeyDrawer" usemap="#keyDrawer_map">
+  <div id="megaContainer">
 
-    <!-- IMAGE MAP -->
-    <map name="keyDrawer_map">
-      <area shape="rect" coords="160,259,579,477" alt="Golden key" onclick="collectKey()">
-    </map>
-    
-    <!-- BACKPACK -->
-    <div id="backPackContainer">
-      <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-      <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-    </div>
-    
-    <!-- BACK BTN -->
-    
-      <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
+    <!-- FRAME -->
+    <img id="borderFrame" src="assets\newborder.png">
 
+    <div id="drawerKeySceneContainer">
+      
+      <!-- SCENE IMAGE -->
+      <img src="assets\Foremal\drawer.png" alt="Golden key inside drawer" id="insideKeyDrawer" usemap="#keyDrawer_map">
 
-    
-    <!-- Inventory -->
-    <div id="inventoryContainer">
-      <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-      <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-      <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-      <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-    </div>
+      <!-- IMAGE MAP -->
+      <map name="keyDrawer_map">
+        <area shape="rect" coords="160,259,579,477" alt="Golden key" onclick="collectKey()">
+      </map>
+      
+      <!-- BACKPACK -->
+      <div id="backPackContainer">
+        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
+        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+      </div>
+      
+      <!-- BACK BTN -->
+      
+        <img src="assets/Knappar/back.png" alt="Back button" id="backBtn" onclick="goBack()">
 
 
-      <!-- DIALOGBOX -->
-      <div id="dialogBoxKey1Container" onclick="closeDialogBox()">
-        <img id="dialogBoxKey1" src="assets\Knappar\dialogBox.png">
-        <img id="talkingHeadKeyDrawer" src="assets\Interior\Foremal\thead3.png">
-        <p id="key1DialogText"></p>
+      
+      <!-- Inventory -->
+      <div id="inventoryContainer">
+        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
+        <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
+        <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
+        <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
       </div>
 
+
+        <!-- DIALOGBOX -->
+        <div id="dialogBoxKey1Container" onclick="closeDialogBox()">
+          <img id="dialogBoxKey1" src="assets\Knappar\dialogBox.png">
+
+          <img id="talkingHeadKeyDrawer" src="assets\Interior\Foremal\thead3.png">
+          <p id="key1DialogText"></p>
+        </div>
+
+    </div>
   </div>
 </body>
 

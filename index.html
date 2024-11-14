@@ -13,7 +13,9 @@
       src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf) format("truetype");
     }
   </style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <script defer src="game.js"></script>
   <style>
@@ -26,7 +28,21 @@
 
 <body>
 
+  
+
+ <div id="megaContainer">
+  
+  <!-- FRAME  -->
+  <img id="borderFrameMainMenu" src="assets\newborder.png">
+
+  
+
   <div id="menu_container" style="background-image: url(assets/Interior/0_3.jpg)" ;>
+    
+    <div id="bannerContainer">
+      <img src="assets\banner.png" alt="" id="bannerImg">
+      <p id="bannerImgText">Detta är ett "point-and-click" spel, du ska klicka dig runt och hitta föremål som hjälper dig framåt. Det finns totalt 4 st föremål. Ditt förstoringsglas signalerar när du hovrar över något klickbart!</p>
+    </div>  
 
     <div class="btn-group-vertical">
       <button id="newgame_btn" onclick="firstScene()">New game</button>
@@ -38,14 +54,14 @@
 
   <!--<img src="assets\Take A Trip Back To The Good Times (Late 90s_Early 2000) _ inside jamari fox.gif" alt="newgame">-->
 
+  
 
 
 
 
 
 
-
-
+</div> 
 
 
 </body>

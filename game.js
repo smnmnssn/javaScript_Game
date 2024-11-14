@@ -49,26 +49,24 @@ function closeInventory() {
 }
 
 function changeBackpackImage() {
-  console.log("Hover in: Changing backpack image"); // Debugging log
   backpack.src = hoverImage; // Byt till hoverbild vid mouseenter
 }
 
 function resetBackpackImage() {
-  console.log("Hover out: Resetting backpack image"); // Debugging log
   backpack.src = originalImage; // Återställ till originalbild vid mouseleave
 }
 
 backpack.addEventListener("mouseenter", () => {
-  console.log("mouseenter triggered"); // Kontrollera om eventen utlöses
   showInventory();
   changeBackpackImage();
 });
 
 backpack.addEventListener("mouseleave", () => {
-  console.log("mouseleave triggered"); // Kontrollera om eventen utlöses
   closeInventory();
   resetBackpackImage();
 });
+
+const itemPickUpIcon = document.getElementById("itemPickUpIcon")
 
 function collectKey() {
   if (!inventory.includes("key")) 
@@ -90,6 +88,8 @@ function collectNote() {
     document.getElementById("noteDialogText").style.display = "block";
     document.getElementById("dialogBoxNote").style.display = "block";
     document.getElementById("talkingHeadNoteDrawer").style.display = "block";
+
+    document.getElementById("itemPickUpIcon").style.display = "block";
     
 
 }
@@ -142,6 +142,9 @@ function secondScene() {
   }
 }
 
+function toMainMenu() {
+  location.href = "index.html";
+}
 
 function secondSceneFromGoldRoom() {
     location.href = "secondscene.html";
@@ -185,7 +188,7 @@ function openDrawer() {
 //Textbox in first scene (bedroom)
 document.addEventListener("DOMContentLoaded", function() {
   // Texten som ska visas bokstav för bokstav
-  const dialogText = "Välkommen till äventyret! Är du redo att utforska slottet och hitta skatten?";
+  const dialogText = "Spelet går ut på att ta sig ut ur slottet med skattkistan, och i detta rum finns det två saker du behöver för det!";
   
   const dialogElement = document.getElementById("dialogText");
   let charIndex = 0;
@@ -205,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //Textbox in hallway
 document.addEventListener("DOMContentLoaded", function() {
   // Texten som ska visas bokstav för bokstav
-  const dialogTextHallway = "Två vägar att gå, in i rummet med den skinande dörren, eller fortsätta framåt..";
+  const dialogTextHallway = "Där nere verkar man kunna gå ut, men först ser denna dörr till vänster mycket intressant ut..";
   
   const dialogElement = document.getElementById("dialogTextHallway");
   let charIndex = 0;
@@ -361,11 +364,7 @@ let scenarios = ["Menu", "Bedroom", "Hallway", "Goldroom", "Courtyard", "Exit"];
 
   
 
-//let allDigits = document.getElementsByClassName("digits");
-let digit1 = document.getElementById("digit1");
-let digit2 = document.getElementById("digit2");
-let digit3 = document.getElementById("digit3");
-let digit4 = document.getElementById("digit4");
+
 
 /*const digits = document.querySelectorAll('.digits');// Hämta alla div-element med klassen "digits"
 
@@ -389,10 +388,12 @@ console.log(currentNumber);*/
 
 
 
+//let allDigits = document.getElementsByClassName("digits");
+let digit1 = document.getElementById("digit1");
+let digit2 = document.getElementById("digit2");
+let digit3 = document.getElementById("digit3");
+let digit4 = document.getElementById("digit4");
 
-
-
-//copypasta
 const correctCombination = [1, 3, 3, 7];  // Den rätta kombinationen som spelaren ska ange
 let playerInput = [];  // Array för att lagra spelarens siffror
 const digits = document.querySelectorAll('.digits'); // Hämta alla div-element med klassen "digits"
