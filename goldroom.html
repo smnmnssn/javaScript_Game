@@ -1,59 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Golden Room</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Golden Room</title>
 
-  <link href="styles.css" rel="stylesheet">
-  <script defer src="game.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
-    rel="stylesheet">
-</head>
-<body>
-  <div id="megaContainer">
-    <!-- FRAME -->
-    <img id="borderFrame" src="assets\newborder.png">
+    <!-- GOOGLE PIXELIFY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM FONT -->
+    <style type="text/css">
+      @font-face {
+        font-family: "myFont";
+        src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf)
+          format("truetype");
+      }
+    </style>
+    <!-- CSS & JS FILE -->
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="game.js"></script>
 
-    <div id="goldRoomContainer">
-      <img id="closed_chest_img" src="assets\Interior\closed_chest.webp" usemap="#goldroom_map">
-      <img src="assets/Knappar/back.png" alt="Back button" id="backBtnGoldRoom" onclick="secondSceneFromGoldRoom()">
-      <img src="assets\Foremal\newLock.png" alt="combination lock" id="combinationLock" onclick="combLock()">
+  </head>
+  <body>
+    <div id="megaContainer">
+      <!-- FRAME -->
+      <img id="borderFrame" src="assets\newborder.png" />
 
-      <!-- BACKPACK -->
-      <div id="backPackContainerGoldRoom">
-        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+      <div id="goldRoomContainer">
+        <!-- BACKGROUND IMAGE -->
+        <img
+          id="closed_chest_img"
+          src="assets\Interior\closed_chest.webp"
+          usemap="#goldroom_map"
+        />
+
+        <!-- BACK BTN -->
+        <img
+          src="assets/Knappar/back.png"
+          alt="Back button"
+          id="backBtnGoldRoom"
+          onclick="secondSceneFromGoldRoom()"
+        />
+
+        <!-- COMBINATION LOCK  -->
+        <img
+          src="assets\Foremal\newLock.png"
+          alt="combination lock"
+          id="combinationLock"
+          onclick="combLock()"
+        />
+
+        <!-- BACKPACK -->
+        <div id="backPackContainerGoldRoom">
+          <img
+            src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png"
+            alt="Inventory"
+            id="backpack"
+          />
+          <img
+            src="assets\Interior\Foremal\image-removebg-preview.png"
+            alt="Inventory"
+            id="backpackOpen"
+          />
+        </div>
+
+        <!-- INVENTORY -->
+        <div id="inventoryContainer">
+          <img
+            src="assets\Knappar\noteicon1.png"
+            alt="Note inventory icon"
+            class="inventoryIcons"
+            id="noteIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\firstkeyicon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="keyIcon"
+          />
+          <img
+            src="assets\Interior\barrelKeyIcon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="barrelKeyIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\chesticon.png"
+            alt="Gold chest inventory icon"
+            class="inventoryIcons"
+            id="goldenChestIcon"
+          />
+        </div>
+
+        <!-- IMAGE MAP  -->
+        <map name="goldroom_map">
+          <area shape="rect" coords="561,586,323,395" alt="Closed chest" />
+        </map>
+
+        <!-- DIALOG BOX -->
+        <div id="dialogBoxContainerGoldRoom" onclick="closeDialogBox()">
+          <img id="dialogBoxGoldRoom" src="assets\Knappar\dialogBox.png" />
+          <img
+            id="talkingHeadGoldRoom"
+            src="assets\Interior\Foremal\thead3.png"
+          />
+          <p id="dialogTextGoldRoom"></p>
+        </div>
       </div>
-      
-      <!-- INVENTORY -->
-      <div id="inventoryContainer">
-        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-        <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-        <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-        <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
-      </div>
-
-      
-
-      <!-- IMAGE MAP  -->
-      <map name="goldroom_map">
-        <area shape="rect" coords="561,586,323,395" alt="Closed chest">
-      </map>
-
-    
-      <!-- DIALOG BOX -->
-      <div id="dialogBoxContainerGoldRoom" onclick="closeDialogBox()">
-        <img id="dialogBoxGoldRoom" src="assets\Knappar\dialogBox.png">
-        <img id="talkingHeadGoldRoom" src="assets\Interior\Foremal\thead3.png">
-        <p id="dialogTextGoldRoom"></p>
-      </div>
-
     </div>
-
-  </div>
-</body>
+  </body>
 </html>

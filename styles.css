@@ -1,21 +1,17 @@
 
 * {
   -webkit-user-select: none;
-  -ms-user-select: none; 
-  user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
   padding:0;
   margin:0;
   box-sizing:border-box;
   font-family: "myFont", Verdana, Tahoma;
-
-   /* WIDTH: 1100px; STÖR AREAS FIXA PLS */
-  
   cursor: url("assets/Interior/Foremal/cursor5.png"), auto;
-  
   }
 
   body {
-    background: url("assets/background1.png");
+    background: url("assets/backgrounddd.png");
   }
 
   #megaContainer {
@@ -25,190 +21,45 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-  }
-  
-  #borderFrame {
-    position: absolute;
-    bottom: -48px;
-    left: -46px;
-    width: 735.5px;
-    height: 735px;
-    border-radius: 15px;
   }
 
-  #borderFrameMainMenu {
-    position: absolute;
-    bottom: -48px;
-    left: -46px;
-    width: 737px;
-    height: 735px;
-    border-radius: 15px;
-  }
-
-  #scene_img { 
+#scene_img {
   display: flex;
   width: 640px;
   height: 640px;
   border-radius: 3px;
-
  }
 
- #firstSceneContainer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
-}
-
-#painting {
-    width: 640px;
-    height: 640px;
-  }
-
- #paintingContainer {
-  display: flex;
-  width: 640px;
-  height: 640px;
- }
-
- #backBtnPainting {
-  position:relative;
-  right: 640px;
-  width: 75px;
-  height: 70px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
- }
-  
- #noteDrawerContainer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
- }
-
- #backPackContainerNote {
-  display: flex;
-  position: relative;
-  top: 500px;
-  right: 100px;  
-  height: 100px;
- }
-
- #hallwayContainer {
-    position: relative;
-    max-width: 640px;
-    max-height: 640px;
- }
-
- #dialogBoxContainerHallway {
-  display: flex;
-  position: relative;
-  width: 470px;
-  bottom: 270px;
-  
- }
-
- #backPackContainerHallway {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  bottom: 363px; 
-  left: 542px;
-  width: 100px;
-  }
-
- #dialogBoxHallway {
-  position: absolute;
-  bottom: -9px;
-  left: 2px;
-  width: 400px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-  
- }
-
- #talkingHeadHallway {
-  position: relative;
-  bottom: 2px;
-  left: 302px;
-  width: 68px;
-  height: 78px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  
- }
-
- #dialogTextHallway {
-  position: absolute; 
-  bottom: 6px;
-  left: 30px;
-  width: 275px;
-  line-height: 1.1rem;
-  font-size: 19px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  
- }
-
- #backBtnHallway {
-  position:relative;
-  left: -10px;
-  bottom: 749px;
-  width: 70px;
-  height: 70px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  transform: rotateY(45deg);
- }
-
- #inventoryContainer{
-  display: flex;
-  flex-direction: column-reverse;
-  position: absolute;
-  top: 46%; 
-  right: 1%; 
-  display: none;
-  margin: 0;
-  width: 65px;
-  height: 250px;
-
-}
-
-.inventoryIcons {
-  position: relative;
-  border: 3px solid rgb(174, 0, 255);
-  width: 60px;
-  height: 60px;  
-  margin: 0;
-  border-radius: 55px;
+.hidden {
   display: none;
 }
 
 input,textarea{
-
 outline:none
-
 }
 
 
 button,input[type="submit"]{
-
 outline:none;
 border:none;
-
 }
 
 button:hover,input[type="submit"]{
-
   cursor:pointer;
   transform: translateY(-0.25em);
-  
   }
 
 li,a{
   text-decoration:none;
   }
-  
+
+area:active {
+  cursor: url("assets/Interior/Foremal/icons8-magnifying-glass-tilted-left-48.png"), auto;
+}
+
+area {
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
 
 #itemPickUpIcon {
   position: absolute;
@@ -221,238 +72,72 @@ li,a{
   display: none;
 }
 
-#mainDoorContainer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
-}
+/* FRAMES */
 
-#inventoryContainerBarrel{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 46%; 
-  right: 41%; 
-  display: none;
-  margin: 0;
-  width: 65px;
-}
-
-#backPackContainerMainDoor {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  bottom: 175px; 
-  left: 542px;
-  width: 100px;
-  }
-
-/*/*/*/*/**/*/*/*/*
-  #barrelSceneContainer {
+#borderFrame {
     position: absolute;
-    max-width: 640px;
-    max-height: 640px;
-
+    bottom: -48px;
+    left: -46px;
+    width: 735.5px;
+    height: 735px;
+    border-radius: 15px;
   }
 
-  #backBtnBarrel {
-    position:relative;
-    left: -10px;
-    bottom: 643px;
-    width: 70px;
-    height: 70px;
-    cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-    transform: rotateY(45deg);
+#borderFrameMainMenu {
+    position: absolute;
+    bottom: -48px;
+    left: -46px;
+    width: 737px;
+    height: 735px;
+    border-radius: 15px;
   }
-
-  #backBtnMainDoor {
-    position:relative;
-    left: -10px;
-    bottom: 639px;
-    width: 70px;
-    height: 70px;
-    cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-    transform: rotateY(45deg);
-  }
-  
-  #barrelKey {
-    max-width: 640px;
-    max-height: 640px;
-  }
-
-#drawerKeySceneContainer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
-}
-
-#insideKeyDrawer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
-}
-
-
-#backPackContainer {
-display: flex;
-position: relative;
-justify-content: flex-end;
-bottom: 102px; 
-left: 542px;
-width: 100px;
-}
-
-#backpack {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  
-}
- 
-  #backpackOpen {
-    display: none; 
-  }
-
-
- #talkingHead {
-  position: relative;
-  bottom: -8px;
-  right: 100px;
-  width: 80px;
-  height: 78px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
- }
-
- #talkingHeadKeyDrawer {
-  position: relative;
-  bottom: 1px;
-  left: 355px;
-  width: 80px;
-  height: 78px;
-  display: none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
- }
-
- #talkingHeadNoteDrawer {
-  position: relative;
-  bottom:-11px;
-  left: 350px;
-  width: 80px;
-  height: 78px;
-  display:none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-
- }
-  
- #goldRoomContainer {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
- } 
-  
-#dialogBoxContainerGoldRoom {
-  display: flex;
-  position: relative;
-  width: 470px;
-  bottom: 279px;
-  
-}
-
-#backPackContainerGoldRoom {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  bottom: 178px; 
-  left: 542px;
-  width: 100px;
-}
-
-#dialogBoxGoldRoom {
-  margin: 0;
-  padding: 0;
-  position: relative; 
-  width: 470px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#talkingHeadGoldRoom {
-  position: relative;
-  bottom:-11px;
-  right: 100px;
-  width: 80px;
-  height: 78px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogTextGoldRoom {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 20px;
- bottom: 15px;
-  width: 285px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#backBtnGoldRoom {
-  position:relative;
-  left: -10px;
-  bottom: 643px;
-  width: 70px;
-  height: 70px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  transform: rotateY(45deg);
-}
-
- #closed_chest_img {
-  position: relative;
-  max-width: 640px;
-  max-height: 640px;
-  border-radius: 5px;
- }
 
 #borderFrameOpenedChest {
+    position: absolute;
+    bottom: -48px;
+    left: -46px;
+    width: 731.5px;
+    height: 735px;
+    border-radius: 15px;
+  }
 
-}
 
-#menu_container {
-  height: 100vh;
-  max-height: 640px;
-  max-width: 640px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 0px;
+/* MAIN MENU */
+
+ #bannerContainer {
   display: flex;
-  border-radius: 5px;
-}
+  position:relative;
+  bottom: 270px;
+  right: px;
+ }
 
+ #bannerImg {
+  position:absolute;
+  width: 650px;
+  height: 200px;
+ }
 
-
+ #bannerImgText {
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2rem;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  top: 40px;
+  left: 125px;
+  width: 440px;
+ }
 
 #newgame_btn {
   background-color: rgb(0, 255, 8);
   background: none;
-  
+
 }
 
 #newgame_btn:focus {
   outline: none;
-  
+
 }
 
 #load_btn {
@@ -486,314 +171,91 @@ width: 100px;
   height: 45px;
   width: 250px;
   color: white;
-  text-shadow: 5px 5px 5px rgb(0, 208, 255); /* outline */
+  text-shadow: 5px 5px 5px rgb(0, 208, 255);
   font-size: 27px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
-.next_scene_btn {
-  position: relative;
-  top: 5%;
-  width: 100px;
-  background-color: black;
-  color: white;
-}
-
-
-
-#combinationLock {
-  position: relative;
-  left: 223px;
-  bottom: 275px;
-  width: 70px;
-  height: 70px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(-10deg);   
-}
-
-#combinationLock:hover {
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-.hidden {
-  display: none;
-}
-
-
-#dialogBoxContainer {
-  display: flex;
-  position: relative;
-  width: 470px;
-  bottom: 270px;
-}
-
-#dialogBoxContainerBarrel {
-  display: flex;
-  position: relative;
-  width: 400px;
-  bottom: 270px;
-  left: 2px;
-  display: none;
-}
-
-#dialogX {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 360px;
-  bottom: 70px;
-  width: 20px;
-  height: 20px;
-
-}
-
-
-#dialogBox {
-  margin: 0;
-  padding: 0;
-  position: relative; 
-  bottom: 3px;
-  width: 470px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
- #bannerContainer {
-  display: flex;
-  position:relative;
-  
-  bottom: 270px;
- }
-
- #bannerImg {
-  position:absolute;
-  width: 650px;
-  height: 200px;
- }
-
- #bannerImgText {
-  position: absolute;
-  color: black;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1.2rem;
-  font-family: Pixelify Sans, Arial;
-  top: 40px;
-  left: 125px;
-  width: 440px;
-
-
-
-
- }
-
-
-
-
-#dialogText {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 25px;
-  bottom: 15px;
-  width: 285px;
-  font-size: 18px;
-  line-height: 1.15rem;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogBoxKey1Container {
-  display: flex;
-  position: relative;
-  width: 470px;
-  bottom: 270px;
-  
-}
-#dialogBoxKey1 {
-  position: absolute;
-  bottom: -10px;
-  width: 470px;
-  height: 100px;
-  display: none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogText1 {
-  position: fixed;
-  bottom: 527px;
-  left: 30px;
-  width: 340px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-
-
-
-#key1DialogText {
-  position: absolute;
-  bottom: 6px;
-  left: 30px;
-  width: 340px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  display: none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogBoxNoteContainer {
-  position: absolute;  
-  width: 470px;
-  height: 100px;
-  top:540px;
-}
-
-#dialogBoxNote {
-  position: absolute;  
-  width: 470px;
-  height: 100px;
-  display: none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-  
-}
-
-#noteDialogText {
-  position: absolute;
-  bottom: 15px;
-  left: 27px;
-  width: 320px;
-  font-size: 20px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  display: none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-
-
-#dialogBoxMainDoor {
-  position: fixed;
-  bottom: 515px;
-  width: 470px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogTextMainDoor {
-  position: absolute;
-  bottom: 15px;
-  left: 30px;
-  width: 275px;
-  font-size: 22px;
-  color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogBoxBarrelKey {
-  margin: 0;
-  padding: 0;
-  position: relative; 
-  bottom: 9px;
-  width: 400px;
-  height: 100px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#talkingHeadBarrel {
-  position: absolute;
-  bottom: 20px;
-  left: 300px;
-  width: 68px;
-  height: 78px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#dialogTextBarrelKey {
-  position: absolute;
-  bottom:35px;
-  left:30px;
-  width:250px;
-  font-size:22px;
-  color:black;
-  font-family:Pixelify Sans, Arial;
-  font-weight:900; 
-  display:none;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
-}
-
-#backPackContainerBarrel {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  bottom: 178px; 
-  left: 542px;
-  width: 100px;
-}
-
-#theGoldenKey {
-  position: relative;
-  width: 50px;
-  height: 95px;
-  bottom: 100px;
-  left: 515px;
-  rotate: 45deg;
-}
-
-
-#combLock {
-  position: relative;
-  width: 50px;
-  height: 70px;
-  bottom: 330px;
-  right: 295px;
-}
-
-#lockArea {
-  position: relative;
-  z-index: 10;
-}
-
-#borderFrameOpenedChest {
+#borderFrameMainMenu {
     position: absolute;
     bottom: -48px;
     left: -46px;
-    width: 731.5px;
+    width: 737px;
     height: 735px;
     border-radius: 15px;
   }
 
-#popUpKey {
-  background: none;
-  width: 175px;
-  height: 150px;
-  position: relative;
-  right: 22%;
-  bottom: 200px;
-  
+#menu_container {
+  height: 100%;
+  max-height: 640px;
+  max-width: 640px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0px;
+  display: flex;
+  border-radius: 5px;
 }
+
+/* FIRST SCENE  */
+
+ #firstSceneContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+
+/* PAINTING SCENE */
+
+#painting {
+    width: 640px;
+    height: 640px;
+  }
+
+ #paintingContainer {
+  display: flex;
+  width: 640px;
+  height: 640px;
+ }
+
+ #backBtnPainting {
+  position:relative;
+  right: 640px;
+  width: 75px;
+  height: 70px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+/* DRAWER KEY */
+
+#drawerKeySceneContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+#insideKeyDrawer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+/* DRAWER NOTE */
+
+ #noteDrawerContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+ }
+
+/* HALLWAY / SECOND SCENE */
+
+ #hallwayContainer {
+    position: relative;
+    max-width: 640px;
+    max-height: 640px;
+ }
 
 #hallwayDoor {
   position: relative;
@@ -804,21 +266,39 @@ width: 100px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
-area:active {
-  cursor: url("assets/Interior/Foremal/icons8-magnifying-glass-tilted-left-48.png"), auto;
-}
+/* GOLD ROOM */
 
-area {
+ #goldRoomContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+ }
+
+#closed_chest_img {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+  border-radius: 5px;
+ }
+
+#combinationLock {
+  position: relative;
+  left: 210px;
+  bottom: 265px;
+  width: 70px;
+  height: 70px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(-10deg);
 }
 
-#combinationSceneContainer { 
+/* COMBINATION LOCK SCENE */
+
+#combinationSceneContainer {
     display: flex;
     position: relative;
     width: 640px;
     height: 640px;
-    background:  url("assets/background1.png");
-   
 }
 
 #combinationLockImage {
@@ -834,7 +314,226 @@ area {
   width: 500px;
   top: 370px;
   left: 13px;
+}
 
+#combinationContainer div {
+  width: 150px;
+}
+
+.digits {
+  color: white;
+  font-size: 10rem;
+  padding: 0;
+  margin: 0;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#combinationLock:hover {
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+/* OPENED CHEST SCENE */
+
+#openedChestContainer {
+  display: flex;
+  position: relative;
+  width: 640px;
+  height: 640px;
+}
+
+
+/* LAST DOOR SCENE */
+
+#mainDoorContainer {
+  position: relative;
+  max-width: 640px;
+  max-height: 640px;
+}
+
+/* BARREL SCENE */
+
+ #barrelKey {
+    display: flex;
+    width: 640px;
+    height: 640px;
+    border-radius: 3px;
+  }
+
+#barrelSceneContainer {
+    position: absolute;
+    max-width: 640px;
+    max-height: 640px;
+  }
+
+
+/* BACKPACK & INVENTORY */
+
+#backPackContainer {
+display: flex;
+position: relative;
+justify-content: flex-end;
+bottom: 102px;
+left: 542px;
+width: 100px;
+}
+
+#backpack {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#backpackOpen {
+    display: none;
+  }
+
+#backPackContainerOpenedChest {
+  display: flex;
+  position: relative;
+  top: 538px;
+  right: 147px;  
+  height: 100px;
+ }
+
+#backPackContainerGoldRoom {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 178px; 
+  left: 542px;
+  width: 100px;
+}
+
+#backPackContainerNote {
+  display: flex;
+  position: relative;
+  top: 500px;
+  right: 100px;
+  height: 100px;
+ }
+
+#backPackContainerHallway {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 363px;
+  left: 542px;
+  width: 100px;
+  }
+
+#backPackContainerMainDoor {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 175px;
+  left: 542px;
+  width: 100px;
+  }
+
+#backPackContainerBarrel {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: 178px; 
+  left: 542px;
+  width: 100px;
+}
+
+ #inventoryContainer{
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 46%;
+  right: 1%;
+  display: none;
+  margin: 0;
+  width: 65px;
+  height: 250px;
+}
+
+.inventoryIcons {
+  position: relative;
+  border: 3px solid rgb(174, 0, 255);
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  border-radius: 55px;
+  display: none;
+}
+
+#inventoryContainerBarrel{
+  position: absolute;
+  top: 46%;
+  right: 41%;
+  display: none;
+  margin: 0;
+  width: 65px;
+}
+
+
+/* BACK BUTTONS */
+
+#backBtn {
+position:relative;
+left: -10px;
+bottom: 739px;
+width: 70px;
+height: 70px;
+cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+transform: rotateY(45deg);
+}
+
+#backBtnPainting {
+  position:relative;
+  right: 640px;
+  width: 75px;
+  height: 70px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#backBtnHallway {
+  position:relative;
+  left: -10px;
+  bottom: 749px;
+  width: 70px;
+  height: 70px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+  transform: rotateY(45deg);
+ }
+
+ #backBtnBarrel {
+    position:relative;
+    left: -10px;
+    bottom: 643px;
+    width: 70px;
+    height: 70px;
+    cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+    transform: rotateY(45deg);
+  }
+
+
+  #backBtnMainDoor {
+    position:relative;
+    left: -10px;
+    bottom: 639px;
+    width: 70px;
+    height: 70px;
+    cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+    transform: rotateY(45deg);
+  }
+
+#backBtnGoldRoom {
+  position:relative;
+  left: -10px;
+  bottom: 643px;
+  width: 70px;
+  height: 70px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+  transform: rotateY(45deg);
 }
 
 #backBtnLastScene {
@@ -847,26 +546,294 @@ area {
   transform: rotateY(45deg);
 }
 
-#combinationContainer div {
-  width: 150px;
-  
+#backBtnOpenedChest {
+  position:relative;
+  right: 635px;
+  height: 75px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 }
 
-#openedChestContainer {
-  display: flex;
-  position: relative;
-  width: 640px;
-  height: 640px;
-
+#backBtnLock {
+position:relative;
+left:-10px;
+bottom: px;
+width: 70px;
+height: 70px;
+cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+transform: rotateY(45deg);
 }
 
-#backPackContainerOpenedChest {
-  display: flex;
+
+/* DIALOGBOX */
+
+#talkingHead {
   position: relative;
-  top: 538px;
-  right: 147px;  
-  height: 100px;
+  bottom: -8px;
+  right: 100px;
+  width: 80px;
+  height: 78px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
  }
+
+#dialogBoxContainer {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+}
+
+#dialogBox {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 3px;
+  width: 470px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogX {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 360px;
+  bottom: 70px;
+  width: 20px;
+  height: 20px;
+}
+
+#dialogText {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 25px;
+  bottom: 15px;
+  width: 285px;
+  font-size: 18px;
+  line-height: 1.15rem;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogBoxContainerHallway {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+ }
+
+#dialogBoxHallway {
+  position: absolute;
+  bottom: -9px;
+  left: 2px;
+  width: 400px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#dialogTextHallway {
+  position: absolute;
+  bottom: 6px;
+  left: 30px;
+  width: 275px;
+  line-height: 1.1rem;
+  font-size: 19px;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#talkingHeadHallway {
+  position: relative;
+  bottom: 2px;
+  left: 302px;
+  width: 68px;
+  height: 78px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#dialogBoxContainerGoldRoom {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 279px;
+}
+
+#dialogBoxGoldRoom {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 470px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogTextGoldRoom {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+ bottom: 15px;
+  width: 285px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#talkingHeadGoldRoom {
+  position: relative;
+  bottom:-11px;
+  right: 100px;
+  width: 80px;
+  height: 78px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogBoxKey1Container {
+  display: flex;
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+}
+
+#dialogBoxKey1 {
+  position: absolute;
+  bottom: -10px;
+  width: 470px;
+  height: 100px;
+  display: none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+
+#key1DialogText {
+  position: absolute;
+  bottom: 6px;
+  left: 30px;
+  width: 340px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  display: none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+
+}
+
+ #talkingHeadKeyDrawer {
+  position: relative;
+  bottom: 1px;
+  left: 355px;
+  width: 80px;
+  height: 78px;
+  display: none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#dialogBoxNoteContainer {
+  position: absolute;
+  width: 470px;
+  height: 100px;
+  top:540px;
+}
+
+#dialogBoxNote {
+  position: absolute;
+  width: 470px;
+  height: 100px;
+  display: none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#noteDialogText {
+  position: absolute;
+  bottom: 15px;
+  left: 27px;
+  width: 320px;
+  font-size: 20px;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  display: none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#talkingHeadNoteDrawer {
+  position: relative;
+  bottom:-11px;
+  left: 350px;
+  width: 80px;
+  height: 78px;
+  display:none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+ }
+
+#dialogBoxMainDoor {
+  position: fixed;
+  bottom: 515px;
+  width: 470px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogTextMainDoor {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  width: 275px;
+  font-size: 22px;
+  color: black;
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+
+}
+
+#dialogBoxContainerBarrel {
+  display: flex;
+  position: relative;
+  width: 400px;
+  bottom: 270px;
+  left: 2px;
+  display: none;
+}
+
+#dialogBoxBarrelKey {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 9px;
+  width: 400px;
+  height: 100px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#talkingHeadBarrel {
+  position: absolute;
+  bottom: 20px;
+  left: 300px;
+  width: 68px;
+  height: 78px;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
+
+#dialogTextBarrelKey {
+  position: absolute;
+  bottom:35px;
+  left:30px;
+  width:250px;
+  font-size:22px;
+  color:black;
+  font-family:Pixelify Sans, sans-serif, Arial;
+  font-weight:900;
+  display:none;
+  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
+}
 
 #dialogBoxContainerOpenedChest {
   display: flex;
@@ -892,8 +859,8 @@ area {
   width: 255px;
   font-size: 20px;
   color: black;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900; 
+  font-family: Pixelify Sans, sans-serif, Arial;
+  font-weight: 900;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
 
 }
@@ -905,42 +872,5 @@ area {
   width: 68px;
   height: 78px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-
 }
 
-#backBtnOpenedChest {
-  position:relative;
-  right: 635px;
-  height: 75px;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-}
-
-#backBtn {
-position:relative;
-left: -10px;
-bottom: 739px;
-width: 70px;
-height: 70px;
-cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-transform: rotateY(45deg);
-}
-
-#backBtnLock {
-position:relative;
-left:-10px;
-bottom: px;
-width: 70px;
-height: 70px;
-cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-transform: rotateY(45deg);
-}
-
-.digits {
-  color: white;
-  font-size: 10rem;
-  padding: 0;
-  margin: 0;
-  font-family: Pixelify Sans, Arial;
-  font-weight: 900;
-  cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
-}

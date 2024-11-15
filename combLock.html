@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Combination lock</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combination lock</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
-  
-  <style type="text/css">
-    @font-face {
-      font-family: "myFont";
-      src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf) format("truetype");
-    }
-  </style>
+    <!-- GOOGLE PIXELIFY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM FONT -->
+    <style type="text/css">
+      @font-face {
+        font-family: "myFont";
+        src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf)
+          format("truetype");
+      }
+    </style>
+    <!-- CSS & JS FILE -->
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="game.js"></script>
+  </head>
 
-  <link href="styles.css" rel="stylesheet">
-  <script defer src="game.js"></script>
-</head>
-<body>
-    
-  <div id="megaContainer">
-    <div id="combinationSceneContainer">
-      
-      <!-- LOCK IMAGE -->
-      <img src="assets\Foremal\emptylock.png" alt="combination lock" id="combinationLockImage">
+  <body>
+    <div id="megaContainer">
+      <div id="combinationSceneContainer">
+        <!-- LOCK IMAGE -->
+        <img
+          src="assets\Foremal\emptylock.png"
+          alt="combination lock"
+          id="combinationLockImage"
+        />
 
-      <!-- BACK BUTTON -->
-      <img src="assets/Knappar/back.png" alt="Back button" id="backBtnLock" onclick="goBack()">
+        <!-- BACK BUTTON -->
+        <img
+          src="assets/Knappar/back.png"
+          alt="Back button"
+          id="backBtnLock"
+          onclick="goBack()"
+        />
 
-      <!-- BACKPACK -->
-      <div style="display:none;">
-        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+        <!-- BACKPACK -->
+        <div style="display: none">
+          <img
+            src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png"
+            alt="Inventory"
+            id="backpack"
+          />
+          <img
+            src="assets\Interior\Foremal\image-removebg-preview.png"
+            alt="Inventory"
+            id="backpackOpen"
+          />
+        </div>
+
+        <!-- COMBINATION LOCK  -->
+        <div id="combinationContainer">
+          <div class="digits" id="digit1">0</div>
+          <div class="digits" id="digit2">0</div>
+          <div class="digits" id="digit3">0</div>
+          <div class="digits" id="digit4">0</div>
+        </div>
       </div>
-
-      <!-- COMBINATION LOCK  -->
-      <div id="combinationContainer">
-        <div class="digits" id="digit1">0</div>
-        <div class="digits" id="digit2">0</div>
-        <div class="digits" id="digit3">0</div>
-        <div class="digits" id="digit4">0</div>
-      </div>
-
     </div>
-  </div>
-
-
-
-
-</body>
+  </body>
 </html>
