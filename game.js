@@ -1,7 +1,6 @@
 console.log(localStorage);
 
 function firstScene() {
-  console.log("12123");
   location.href = "firstscene.html";
   document.getElementById("dialogBoxContainer").style.display = "none";
 }
@@ -73,7 +72,7 @@ function collectKey() {
   document.getElementById("key1DialogText").style.display = "block";
   document.getElementById("dialogBoxKey1").style.display = "block";
   document.getElementById("talkingHeadKeyDrawer").style.display = "block";
-  document.getElementById("talkingHead").style.display = "block";
+  
 }
 
 function collectNote() {
