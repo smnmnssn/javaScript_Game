@@ -1,4 +1,4 @@
-console.log(localStorage);
+
 
 function firstScene() {
   location.href = "firstscene.html";
@@ -129,7 +129,7 @@ function toMainMenu() {
   location.href = "index.html";
 }
 
-function secondSceneFromGoldRoom() {
+function toSecondScene() {
   location.href = "secondscene.html";
 }
 
@@ -168,9 +168,11 @@ function openDrawer() {
 }
 
 //Textbox in first scene (bedroom)
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogShown")) {
   const dialogText =
     "Spelet går ut på att ta sig ut ur slottet med skattkistan, och i detta rum finns det två saker du behöver för det!";
+
+    document.getElementById("dialogBoxContainer").style.display = "flex";
 
   const dialogElement = document.getElementById("dialogText");
   let charIndex = 0;
@@ -184,14 +186,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showNextChar();
-});
+
+  localStorage.setItem("dialogShown", "true");
+};
 
 //Textbox in hallway
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogHallShown")) {
   const dialogTextHallway =
     "Där nere verkar man kunna gå ut, men först ser denna dörr till vänster mycket intressant ut..";
   const dialogElement = document.getElementById("dialogTextHallway");
   let charIndex = 0;
+
+  document.getElementById("dialogBoxContainerHallway").style.display = "flex";
 
   function showNextChar() {
     if (charIndex < dialogTextHallway.length) {
@@ -202,10 +208,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showNextChar();
-});
+
+  localStorage.setItem("dialogHallShown", "true");
+
+};
 
 //Textbox key 1 collected in drawer
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogDrawerKeyShown")) {
+  document.getElementById("dialogBoxKey1Container").style.display = "flex";
+
   const key1DialogText =
     "Snyggt! Du hittar en nyckel och stoppar den i din ryggsäck, undra vad den är till?";
 
@@ -221,10 +232,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showNextChar();
-});
+  localStorage.setItem("dialogDrawerKeyShown", "true");
+
+};
+
 
 //Textbox note collected in drawer
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogDrawerNoteShown")) {
+  document.getElementById("dialogBoxNoteContainer").style.display = "flex";
+  localStorage.setItem("dialogDrawerNoteShown", "true");
   const noteDialogText =
     "Du hittar en mystisk lapp med någon slags kod som du stoppar ner i din ryggsäck..";
 
@@ -240,13 +256,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showNextChar();
-});
+};
 
 //Textbox goldroom
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogGoldRoomShown")) {
+  document.getElementById("dialogBoxContainerGoldRoom").style.display = "flex";
+  localStorage.setItem("dialogGoldRoomShown", "true");
+
   const dialogTextGoldRoom =
     "En skattkista! Den är låst, så vi måste få upp låset på något sätt!";
 
+  
+  
   const dialogElement = document.getElementById("dialogTextGoldRoom");
   let charIndex = 0;
 
@@ -259,10 +280,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showNextChar();
-});
+
+};
 
 //Textbox opened chest room
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogGoldChestShown")) {
+  document.getElementById("dialogBoxContainerOpenedChest").style.display = "flex";
+  localStorage.setItem("dialogGoldChestShown", "true");
+
   // Texten som ska visas bokstav för bokstav
   const dialogTextOpenedChest =
     "Wow! Du får upp kistan och fyller din ryggsäck med guld! ";
@@ -280,10 +305,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Starta bokstav-för-bokstav-animationen
   showNextChar();
-});
+};
 
 //Textbox last room main door
-document.addEventListener("DOMContentLoaded", function () {
+if (!localStorage.getItem("dialogMainDoorShown")) {
+  document.getElementById("dialogBoxMainDoorContainer").style.display = "flex";
+  localStorage.setItem("dialogMainDoorShown", "true");
+  dialogBoxMainDoorContainer
   // Texten som ska visas bokstav för bokstav
   const dialogTextMainDoor =
     "Detta ser ut att vara utgången..men porten är låst!";
@@ -301,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Starta bokstav-för-bokstav-animationen
   showNextChar();
-});
+};
 
 //Textbox barrel key on collect
 document.addEventListener("DOMContentLoaded", function () {

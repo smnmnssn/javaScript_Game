@@ -389,7 +389,6 @@ width: 100px;
 #backpack {
   margin: 0;
   padding: 0;
-  position: relative;
   width: 100px;
   height: 100px;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
@@ -583,10 +582,10 @@ transform: rotateY(45deg);
  }
 
 #dialogBoxContainer {
-  display: flex;
   position: relative;
   width: 470px;
   bottom: 270px;
+  display: none;
 }
 
 #dialogBox {
@@ -625,7 +624,7 @@ transform: rotateY(45deg);
 }
 
 #dialogBoxContainerHallway {
-  display: flex;
+  display: none;
   position: relative;
   width: 470px;
   bottom: 270px;
@@ -663,7 +662,7 @@ transform: rotateY(45deg);
  }
 
 #dialogBoxContainerGoldRoom {
-  display: flex;
+  display: none;
   position: relative;
   width: 470px;
   bottom: 279px;
@@ -702,7 +701,7 @@ transform: rotateY(45deg);
 }
 
 #dialogBoxKey1Container {
-  display: flex;
+  display: none;
   position: relative;
   width: 470px;
   bottom: 270px;
@@ -747,6 +746,7 @@ transform: rotateY(45deg);
   width: 470px;
   height: 100px;
   top:540px;
+  display: none;
 }
 
 #dialogBoxNote {
@@ -779,6 +779,13 @@ transform: rotateY(45deg);
   display:none;
   cursor: url("assets/Interior/Foremal/cursorfinito.png"), auto;
  }
+
+#dialogBoxMainDoorContainer {
+  position: relative;
+  width: 470px;
+  bottom: 270px;
+  display: none;
+}
 
 #dialogBoxMainDoor {
   position: fixed;
@@ -843,7 +850,7 @@ transform: rotateY(45deg);
 }
 
 #dialogBoxContainerOpenedChest {
-  display: flex;
+  display: none;
   position: absolute;
   width: 400px;
   height: 100px;
