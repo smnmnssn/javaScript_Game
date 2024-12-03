@@ -425,9 +425,8 @@ width: 100px;
 
 #backPackContainerHallway {
   display: flex;
-  position: relative;
-  justify-content: flex-end;
-  bottom: 363px;
+  position: fixed;
+  bottom: 2px;
   left: 542px;
   width: 100px;
   }
