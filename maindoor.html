@@ -1,58 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main door</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
-    rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <script defer src="game.js"></script> 
-</head>
-<body>
-  <div id="megaContainer">
-    <!-- FRAME  -->
-    <img id="borderFrame" src="assets\newborder.png">
-    
-    <div id="mainDoorContainer">
-      <img id="scene_img" src="assets\Interior\0_1.jpg" usemap="#maindoor_map">
-      
-      <!-- BACK BTN -->
-      <img src="assets/Knappar/back.png" alt="Back button" id="backBtnMainDoor" onclick="goBack()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main door</title>
+    <!-- GOOGLE PIXELIFY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM FONT -->
+    <style type="text/css">
+      @font-face {
+        font-family: "myFont";
+        src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf)
+          format("truetype");
+      }
+    </style>
+    <!-- CSS & JS FILE -->
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="game.js"></script>
+  </head>
 
-      <!-- IMAGE MAP -->
-      <map name="maindoor_map">
-        <area shape="rect" coords="434,271,544,410" alt="Barrel with key" id="barrel" onclick="showBarrelKey()">
-        <area shape="rect" coords="169,144,388,385" alt="Big wooden door" onclick="finalDoor()">
-      </map>
-      
+  <body>
+    <div id="megaContainer">
+      <!-- FRAME  -->
+      <img id="borderFrame" src="assets\newborder.png" />
 
-      <!-- INVENTORY -->
-      <div id="inventoryContainer">
-        <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-        <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-        <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-        <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+      <div id="mainDoorContainer">
+        <!-- SCENE IMG -->
+        <img
+          id="scene_img"
+          src="assets\Interior\0_1.jpg"
+          usemap="#maindoor_map"
+        />
+
+        <!-- BACK BTN -->
+        <img
+          src="assets/Knappar/back.png"
+          alt="Back button"
+          id="backBtnMainDoor"
+          onclick="toSecondScene()"
+        />
+
+        <!-- IMAGE MAP -->
+        <map name="maindoor_map">
+          <area
+            shape="rect"
+            coords="434,271,544,410"
+            alt="Barrel with key"
+            id="barrel"
+            onclick="showBarrelKey()"
+          />
+          <area
+            shape="rect"
+            coords="169,144,388,385"
+            alt="Big wooden door"
+            onclick="finalDoor()"
+          />
+        </map>
+
+        <!-- INVENTORY -->
+        <div id="inventoryContainer">
+          <img
+            src="assets\Knappar\noteicon1.png"
+            alt="Note inventory icon"
+            class="inventoryIcons"
+            id="noteIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\firstkeyicon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="keyIcon"
+          />
+          <img
+            src="assets\Interior\barrelKeyIcon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="barrelKeyIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\chesticon.png"
+            alt="Gold chest inventory icon"
+            class="inventoryIcons"
+            id="goldenChestIcon"
+          />
+        </div>
+
+        <!-- BACKPACK -->
+        <div id="backPackContainerMainDoor">
+          <img
+            src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png"
+            alt="Inventory"
+            id="backpack"
+          />
+          <img
+            src="assets\Interior\Foremal\image-removebg-preview.png"
+            alt="Inventory"
+            id="backpackOpen"
+          />
+        </div>
+
+        <!-- DIALOGBOX -->
+        <div id="dialogBoxMainDoorContainer" onclick="closeDialogBox()">
+          <img id="dialogBox" src="assets\Knappar\dialogBox.png" />
+          <img id="talkingHead" src="assets\Interior\Foremal\thead3.png" />
+          <p id="dialogTextMainDoor"></p>
+        </div>
       </div>
-
-      <!-- BACKPACK -->
-      <div id="backPackContainerMainDoor">
-        <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-        <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
-      </div>
-
-
-      <!-- DIALOGBOX -->
-      <div id="dialogBoxContainer" onclick="closeDialogBox()">
-        <img id="dialogBox" src="assets\Knappar\dialogBox.png">
-        <img id="talkingHead" src="assets\Interior\Foremal\thead3.png">
-        <p id="dialogTextMainDoor"></p>
-      </div>
-
-    </div>     
-  </div>     
-</body>
+    </div>
+  </body>
 </html>

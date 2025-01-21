@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hallway</title>
-    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barrel</title>
+    <!-- GOOGLE PIXELIFY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM FONT -->
+    <style type="text/css">
+      @font-face {
+        font-family: "myFont";
+        src: url(assets/Fonts_etc/ScreamWhenYoureReadyToDieRegular-6AjD.ttf)
+          format("truetype");
+      }
+    </style>
+    <!-- CSS & JS FILE -->
+    <link href="styles.css" rel="stylesheet" />
     <script defer src="game.js"></script>
-  
-    <!-- GOOGLE FONT PIXELFIY -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
   </head>
-<body>
-  
-  <div id="megaContainer">
+  <body>
+    <div id="megaContainer">
       <!-- FRAME <img id="borderFrame" src="assets\newborder.png"> -->
-      
-        <!-- BARREL SCENE CONTAINER -->
+
+      <!-- BARREL SCENE CONTAINER -->
       <div id="barrelSceneContainer">
-        
         <!-- IMAGE MAP  -->
-        <img src="assets\Interior\0_0.jpg" alt="Barrel with key" id="barrelKey" usemap="#barrel_map">
-        
+        <img
+          src="assets\Interior\0_0.jpg"
+          alt="Barrel with key"
+          id="barrelKey"
+          usemap="#barrel_map"
+        />
+
         <map name="barrel_map">
-          <area shape="rect" coords="76,511,394,668" alt="Golden key" onclick="collectBarrelKey()">
+          <area
+            shape="rect"
+            coords="76,511,394,668"
+            alt="Barrel key"
+            id="barrelKeyArea"
+            onclick="collectBarrelKey()"
+          />
         </map>
-          
+
         <!-- BACK BTN -->
-        <img src="assets/Knappar/back.png" alt="Back button" id="backBtnBarrel" onclick="goBack()">
-        
+        <img
+          src="assets/Knappar/back.png"
+          alt="Back button"
+          id="backBtnBarrel"
+          onclick="hallwayToFrontDoor()"
+        />
+
         <!-- INVENTORY -->
         <div id="inventoryContainer">
-          <img src="assets\Knappar\noteicon1.png" alt="Note inventory icon" class="inventoryIcons" id="noteIcon">
-          <img src="assets\Interior\Foremal\firstkeyicon.png" alt="Key inventory icon" class="inventoryIcons" id="keyIcon">
-          <img src="assets\Interior\barrelKeyIcon.png" alt="Key inventory icon" class="inventoryIcons" id="barrelKeyIcon">
-          <img src="assets\Interior\Foremal\chesticon.png" alt="Gold chest inventory icon" class="inventoryIcons" id="goldenChestIcon">
+          <img
+            src="assets\Knappar\noteicon1.png"
+            alt="Note inventory icon"
+            class="inventoryIcons"
+            id="noteIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\firstkeyicon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="keyIcon"
+          />
+          <img
+            src="assets\Interior\barrelKeyIcon.png"
+            alt="Key inventory icon"
+            class="inventoryIcons"
+            id="barrelKeyIcon"
+          />
+          <img
+            src="assets\Interior\Foremal\chesticon.png"
+            alt="Gold chest inventory icon"
+            class="inventoryIcons"
+            id="goldenChestIcon"
+          />
         </div>
 
         <!-- BACKPACK -->
         <div id="backPackContainerBarrel">
-          <img src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png" alt="Inventory" id="backpack">
-          <img src="assets\Interior\Foremal\image-removebg-preview.png" alt="Inventory" id="backpackOpen">
+          <img
+            src="assets\Interior\Foremal\b3b5f4da-d678-4ba2-88ed-adc93f1a31d7-removebg-preview.png"
+            alt="Inventory"
+            id="backpack"
+          />
+          <img
+            src="assets\Interior\Foremal\image-removebg-preview.png"
+            alt="Inventory"
+            id="backpackOpen"
+          />
         </div>
-        
+
         <!-- DIALOGBOX -->
         <div id="dialogBoxContainerBarrel" onclick="closeDialogBox()">
-          <img id="dialogBoxBarrelKey" src="assets\Knappar\dialogBox.png">
-          <img id="talkingHeadBarrel" src="assets\Interior\Foremal\thead3.png">
+          <img id="dialogBoxBarrelKey" src="assets\Knappar\dialogBox.png" />
+          <img
+            id="talkingHeadBarrel"
+            src="assets\Interior\Foremal\thead3.png"
+          />
           <p id="dialogTextBarrelKey"></p>
-        </div>  
-        
+        </div>
+      </div>
     </div>
-    
-  </div>
-
-</body>
+  </body>
 </html>
